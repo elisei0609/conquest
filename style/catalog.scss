@@ -1,0 +1,117 @@
+@function get-vw($target) {
+   $vw-context: (1366*.01) * 1px;
+   @return ($target/$vw-context) * 1vw;
+}
+
+@function get-rem($target) {
+   @return ($target/16) * 1rem;
+}
+
+@mixin roboto {
+   font-family: 'Roboto', sans-serif;
+}
+
+@mixin playfair {
+   font-family: 'Playfair Display', serif;
+}
+
+@mixin prata {
+   font-family: 'Prata', serif;
+}
+
+@mixin line {
+   content: '';
+   position: absolute;
+   display: inline-block;
+   width: 50px;
+   height: 1px;
+   background-color: #8B8371;
+   top: 50%;
+
+}
+
+.header {
+   padding-top: 30px;
+   color: #555248;
+   font-size: 14px;
+   .container {
+      padding: 0 107px 0px 99px;
+
+   }
+   &-buttons {
+      display: flex;
+      justify-content: space-between;
+      display: flex;
+  justify-content: space-between;
+  align-items: center;
+      &-container {
+         max-width: 100px;
+         display: flex;
+         width: 100%;
+         justify-content: space-between;
+      }
+}
+.nav {
+   max-width: 430px;
+   width: 100%;
+      &-list {
+         display: flex;
+         max-width: 430px;
+         width: 100%;
+         justify-content: space-between;
+            &__item_active {
+               color: #A69876;
+            }
+      }
+}
+   }
+
+   #main {
+      padding-top: 53px;
+      .container {
+         padding: 0px 103px;
+      }
+   }
+   .pages {
+      font-size: 14px;
+      color: #B3B3B3;
+      &-list {
+         display: flex;
+            &__item {
+               position: relative;
+               margin-right: 31px;
+               font-weight: 500;
+                  &_active {
+                     color: #555248;
+                  }
+                  &:last-child {
+                     &:before,
+                     &:after {
+                        display: none;
+                     }
+                  }
+                  &:before {
+                     content: '';
+                     display: inline-block;
+                     width: 7px;
+                     position: absolute;
+                     height: 1px;
+                     background-color: #BDB9B5;
+                     right: -20px;
+                     top: 30%;
+                     transform: rotate(45deg);
+                  }
+                  &:after {
+                     content: '';
+                     display: inline-block;
+                     width: 7px;
+                     position: absolute;
+                     height: 1px;
+                     background-color: #BDB9B5;
+                     right: -20px;
+                     bottom: 40%;
+                     transform: rotate(-45deg);
+                  }
+            }
+      }
+   }

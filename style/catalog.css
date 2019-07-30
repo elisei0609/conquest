@@ -1,0 +1,114 @@
+.header {
+  padding-top: 30px;
+  color: #555248;
+  font-size: 14px;
+}
+
+.header .container {
+  padding: 0 107px 0px 99px;
+}
+
+.header-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-buttons-container {
+  max-width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header .nav {
+  max-width: 430px;
+  width: 100%;
+}
+
+.header .nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 430px;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header .nav-list__item_active {
+  color: #A69876;
+}
+
+#main {
+  padding-top: 53px;
+}
+
+#main .container {
+  padding: 0px 103px;
+}
+
+.pages {
+  font-size: 14px;
+  color: #B3B3B3;
+}
+
+.pages-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pages-list__item {
+  position: relative;
+  margin-right: 31px;
+  font-weight: 500;
+}
+
+.pages-list__item_active {
+  color: #555248;
+}
+
+.pages-list__item:last-child:before, .pages-list__item:last-child:after {
+  display: none;
+}
+
+.pages-list__item:before {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  position: absolute;
+  height: 1px;
+  background-color: #BDB9B5;
+  right: -20px;
+  top: 30%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.pages-list__item:after {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  position: absolute;
+  height: 1px;
+  background-color: #BDB9B5;
+  right: -20px;
+  bottom: 40%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+/*# sourceMappingURL=catalog.css.map */
