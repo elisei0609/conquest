@@ -24,7 +24,8 @@
    content: '';
    position: absolute;
    display: inline-block;
-   width: 50px;
+   width: 2em;
+   max-width: 50px;
    height: 1px;
    background-color: #8B8371;
    top: 50%;
@@ -51,7 +52,7 @@ img {
    max-width: 1366px;
    width: 100%;
    height: 100%;
-   padding: 0 55px;
+   padding: 0 3.421%;
    margin: 0 auto;
 }
 
@@ -69,13 +70,20 @@ img {
 
 .introduction {
    position: relative;
-   height: 850px;
    padding-top: 30px;
-   background-image: url(../img/Component.png);
-   background-size: contain;
-   background-repeat: no-repeat;
-   background-position-x: 65%;
-
+   // background-image: url(../img/Component.png);
+   // background-size: contain;
+   // background-repeat: no-repeat;
+   // background-position-x: 65%;
+   .special-span {
+      position: relative;
+      &:before {
+         @include line;
+         width: 1em;
+         top: 63%;
+         left: -50%;
+      }
+   }
    .wrapper {
       width: 100%;
       height: 100%;
@@ -97,44 +105,60 @@ img {
    }
 
    &-content {
-      margin-left: 130px;
-      margin-top: 180px;
+      display: flex;
+      max-height: 848px;
+         &-image {
+            position: relative;
+               img {
+                  height: auto;
+               }
+         }
+         &-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 29%;
+            margin-left: auto;
+            position: relative;
+            right: -4%;
+            z-index: 1;
+         }
 
       &__title {
          font-size: get-rem(45);
-         position: relative;
+         
          display: inline-block;
 
-         &:before {
-            @include line;
-            top: 63%;
-            left: -19%;
-         }
+       
       }
 
       &__collection {
          font-size: get-rem(30);
-         margin-bottom: 33px;
+         margin-bottom: 7%;
       }
 
       &__text {
          font-size: get-rem(14);
-         margin-bottom: get-rem(64);
-         width: 24%;
+         
+         width: 60%;
          color: rgba(27, 26, 23, 0.82);
+         margin-bottom: 15%;
       }
 
       &__btn {
          background-color: #444240;
-         padding: 27px 38px;
+         padding: 6%;
          font-size: get-rem(12);
          letter-spacing: 0.05em;
+         max-width: 205px;
+         max-height: 64px;
+         height: 64px;
       }
    }
 
    &-price {
       position: absolute;
-      left: 43.5%;
+      left: 7.5%;
       top: 16.5%;
 
       &:after {
@@ -145,17 +169,21 @@ img {
 
    &-size {
       position: absolute;
-      right: 12.5%;
-      bottom: 22.5%;
-
-      &:after {
-         @include line;
-         right: 110%;
-      }
+            left: 7.5%;
+            bottom: 22.5%;
+            &:after {
+               @include line;
+               left: 110%;
+            }
+         }
+      
+   
    }
 
    .header {
       display: flex;
+      width: 78.5vw;
+      max-width: 1256px;
 
       &-buttons {
          display: flex;
@@ -206,7 +234,7 @@ img {
          }
       }
    }
-}
+
 
 .btn {
    @include roboto;
@@ -240,7 +268,7 @@ h2 {
 .popular {
    padding-bottom: 70px;
    .container {
-      padding: 0 98px;
+      padding: 0 6.1%;
    }
    &-title {
       text-align: center;
@@ -611,3 +639,45 @@ h2 {
          }
       }
 }
+
+@media screen and (max-width: 1150px) {
+   .social-media {
+      display: none;
+   }
+   .introduction {
+      &-content {
+         &__title {
+            font-size: 35px;
+         }
+         &__text {
+            width: 90%;
+         }
+      }
+   }
+}
+@media screen and (max-width: 808px) {
+   .introduction {
+         &-content {
+            &__title {
+               font-size: 30px;
+            }
+         }
+   }
+}
+@media screen and (max-width: 601px) {
+   .introduction {
+         &-size {
+            font-size: 14px;
+         }
+         &-content {
+            &__title {
+               font-size: 25px;
+            }
+            &__collection {
+               font-size: 25px;
+            }
+
+         }
+   }
+}
+
