@@ -186,7 +186,7 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 78.5vw;
+  width: 100%;
   max-width: 1256px;
 }
 
@@ -325,7 +325,9 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 55px;
+  padding-top: 5%;
+  padding-left: 5%;
+  padding-bottom: 7%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -333,11 +335,10 @@ h2 {
 }
 
 .popular-watches-text {
-  padding-left: 32px;
+  padding-top: 6%;
 }
 
 .popular-watches-text-second {
-  padding: 55px 0 47px 42px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -345,14 +346,6 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.popular-watches-text-second:nth-child(2) {
-  padding: 55px 0 47px 60px;
-}
-
-.popular-watches-text-second:nth-child(2) img {
-  margin-left: 97px;
 }
 
 .popular-watches-text-second a {
@@ -374,9 +367,14 @@ h2 {
   left: -50px;
 }
 
+.popular-watches .popular-watches-text-second {
+  padding: 10% 0;
+}
+
 .popular-watches__item {
-  width: 50%;
+  width: 45%;
   max-height: 246px;
+  padding-left: 3vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -384,18 +382,16 @@ h2 {
 
 .popular-watches__item:nth-child(3) img {
   margin-top: auto;
-  margin-left: 22px;
+  margin-left: auto;
 }
 
 .popular-watches__item:last-child img {
-  margin-left: 97px;
-}
-
-.popular-watches__item:last-child .popular-watches-text-second {
-  padding: 55px 0 47px 60px;
+  margin-left: auto;
 }
 
 .popular-watches__item a {
+  margin-top: auto;
+  margin-left: 60.5%;
   position: relative;
 }
 
@@ -424,17 +420,18 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-top: 40px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-left: 3%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
   max-height: 493px;
 }
 
-.popular-watches__item_small a {
-  margin-top: 15px;
-  margin-left: 80px;
-}
-
-.popular-watches__item_small .popular-watches-text {
-  padding-left: 40px;
+.popular-watches__item_small a.popular-watches__more {
+  margin-bottom: 10%;
+  margin-left: 10%;
 }
 
 .popular-watches__item_big {
@@ -460,12 +457,13 @@ h2 {
 
 .popular-watches__item_big img {
   margin-left: auto;
+  height: auto;
+  width: inherit;
 }
 
 .popular-watches__item_big a.popular-watches__more {
   margin-top: auto;
-  margin-bottom: 68px;
-  margin-left: 66px;
+  margin-left: 65%;
   position: relative;
 }
 
@@ -485,9 +483,7 @@ h2 {
   -o-object-fit: contain;
      object-fit: contain;
   display: inline-block;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: auto;
 }
 
 .link-container {
@@ -507,18 +503,47 @@ h2 {
   padding-bottom: 26px;
 }
 
-.quality .container {
-  padding: 0 182px;
+@media screen and (max-width: 808px) {
+  .quality-images {
+    width: 100%;
+  }
 }
 
-.quality img {
+.quality-images img {
   max-width: 521px;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (max-width: 808px) {
+  .quality-images img {
+    max-width: 100%;
+  }
+}
+
+.quality .container {
+  padding: 0 13%;
+}
+
+@media screen and (max-width: 808px) {
+  .quality .container {
+    padding: 0 10%;
+  }
 }
 
 .quality-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media screen and (max-width: 808px) {
+  .quality-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 .quality-text {
@@ -533,23 +558,43 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-left: 70px;
+  margin-left: 7%;
+}
+
+@media screen and (max-width: 808px) {
+  .quality-text {
+    margin-left: 0;
+    max-width: 90%;
+  }
 }
 
 .quality-text__title {
-  margin-bottom: 38px;
+  margin-bottom: 10%;
+}
+
+@media screen and (max-width: 808px) {
+  .quality-text__title {
+    margin-bottom: 5%;
+  }
 }
 
 .quality-text__text {
-  margin-bottom: 45px;
+  margin-bottom: 12%;
   line-height: 150%;
+}
+
+@media screen and (max-width: 808px) {
+  .quality-text__text {
+    margin-bottom: 5%;
+  }
 }
 
 .quality-text__button {
   background-color: #D4B098;
-  padding: 26px 38px;
-  max-width: 205px;
   font-size: 0.75rem;
+  max-width: 205px;
+  max-height: 64px;
+  height: 64px;
 }
 
 .quality-pagination {
@@ -563,6 +608,16 @@ h2 {
       -ms-flex-align: start;
           align-items: flex-start;
   margin-right: 14.5%;
+}
+
+@media screen and (max-width: 808px) {
+  .quality-pagination {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+    margin-bottom: 5%;
+  }
 }
 
 .quality-pagination__number {
@@ -635,11 +690,11 @@ h2 {
 }
 
 .news {
-  padding: 83px 0;
+  padding: 5.7% 0;
 }
 
 .news .container {
-  padding: 0 98px;
+  padding: 0 7%;
 }
 
 .news-container {
@@ -648,12 +703,31 @@ h2 {
   display: flex;
 }
 
+@media screen and (max-width: 745px) {
+  .news-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .news-images {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+}
+
+@media screen and (max-width: 745px) {
+  .news-images {
+    -ms-flex-negative: 1;
+        flex-shrink: 1;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .news-images img {
+    width: 100%;
+  }
 }
 
 .news-images-first {
@@ -666,9 +740,21 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   margin-right: 10px;
+}
+
+@media screen and (max-width: 745px) {
+  .news-images-first {
+    -ms-flex-negative: 1;
+        flex-shrink: 1;
+    width: 100%;
+    margin: 0;
+  }
 }
 
 .news-images-first img:nth-child(1) {
@@ -679,6 +765,18 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media screen and (max-width: 745px) {
+  .news-images-second {
+    -ms-flex-negative: 1;
+        flex-shrink: 1;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .news-images-second img {
+    width: 100%;
+  }
 }
 
 .news-text {
@@ -693,14 +791,22 @@ h2 {
       -ms-flex-pack: center;
           justify-content: center;
   padding-top: 36px;
+  width: 30%;
+  margin-right: 30px;
+}
+
+@media screen and (max-width: 745px) {
+  .news-text {
+    padding-top: 0;
+    margin-bottom: 30px;
+    margin-right: 0;
+    width: 100%;
+  }
 }
 
 .news-text__text {
   margin: 34px 0;
-}
-
-.news-text__text {
-  width: 65%;
+  width: 100%;
 }
 
 .news-text-medias-list {
@@ -723,7 +829,7 @@ h2 {
 }
 
 .footer .container {
-  padding: 0px 182px;
+  padding: 0px 5vw;
 }
 
 .footer-container {
@@ -736,7 +842,8 @@ h2 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  max-width: 981px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .footer-column {
@@ -749,13 +856,29 @@ h2 {
           flex-direction: column;
 }
 
+@media screen and (max-width: 745px) {
+  .footer-column {
+    width: 50%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 15px;
+  }
+}
+
 .footer-column:first-child .footer-column__title {
   margin-bottom: 17px;
 }
 
 .footer-column__item {
   font-size: 12px;
-  margin-bottom: 12px;
+  margin-top: 15px;
+}
+
+@media screen and (max-width: 745px) {
+  .footer-column__item {
+    text-align: center;
+  }
 }
 
 .footer-column__item:last-child {
@@ -769,6 +892,13 @@ h2 {
   color: #fff;
   padding-top: 10px;
   margin-bottom: 26px;
+}
+
+@media screen and (max-width: 745px) {
+  .footer-column__title {
+    padding: 0;
+    font-size: 12px;
+  }
 }
 
 .footer-contacts h4 {
@@ -794,14 +924,55 @@ h2 {
 }
 
 @media screen and (max-width: 601px) {
+  .introduction .container {
+    padding: 0 5px;
+  }
+  .introduction .special-span {
+    position: static;
+  }
   .introduction-size {
     font-size: 14px;
   }
+  .introduction-size:after {
+    width: 1em;
+  }
+  .introduction-price:after {
+    width: 1.2em;
+  }
   .introduction-content__title {
-    font-size: 25px;
+    font-size: 22px;
   }
   .introduction-content__collection {
-    font-size: 25px;
+    font-size: 22px;
+  }
+  .introduction-content__btn {
+    height: 48px;
+  }
+  .introduction-content__text {
+    width: 100%;
+  }
+  .popular-watches-content {
+    padding-left: 0;
+  }
+  .popular-watches__item {
+    width: 100%;
+  }
+  .popular-watches__item_big .popular-watches__more {
+    margin-left: 55%;
+  }
+  .popular-watches__item_big .popular-watches__more:before {
+    left: -100%;
+    width: 1.5em;
+  }
+  .popular-watches__item__more {
+    margin-left: 55%;
+  }
+  .popular-watches__item__more:before {
+    left: -100%;
+    width: 1.5em;
+  }
+  .popular-watches__item-content {
+    padding-left: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
