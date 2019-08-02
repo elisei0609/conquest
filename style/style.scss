@@ -47,6 +47,10 @@ body {
 img {
    object-fit: contain;
 }
+button {
+   border: 0;
+   background: initial;
+}
 
 .container {
    max-width: 1366px;

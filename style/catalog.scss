@@ -31,11 +31,12 @@
 }
 
 .header {
-   padding-top: 30px;
+   padding-top: 2%;
    color: #555248;
    font-size: 14px;
+   margin: 0 auto;
    .container {
-      padding: 0 107px 0px 99px;
+      
 
    }
    &-buttons {
@@ -67,9 +68,9 @@
    }
 
    #main {
-      padding-top: 53px;
+      padding-top: 5%;
       .container {
-         padding: 0px 103px;
+         padding: 0px 3.421%;
       }
    }
    .pages {
@@ -133,14 +134,19 @@
          padding-left: 8.10%;
          &-list {
             display: flex;
+            flex-wrap: wrap;
          }
          &__arrow-filter {
            text-align: right;
+           margin-bottom: 5%;
          }
          &-item {
-            width: 29.7%;
+            width: 33.3%;
             padding: 0 20px;
             max-height: 300px;
+               @media screen and (max-width: 1050px){
+                  width: 50%;
+               }
          }
          &-container {
             display: block;
@@ -150,11 +156,22 @@
             display: block;
             width: auto;
             max-height: 265px;
+            height: 100%;
+            object-fit: cover;
          }
 
          &-buttons {
             display: flex;
             justify-content: space-between;
+         }
+         &-social {
+            display: flex;
+            justify-content: space-between;
+            width: 22%;
+               button {
+                  position: relative;
+                  z-index: 10;
+               }
          }
       }
    }
