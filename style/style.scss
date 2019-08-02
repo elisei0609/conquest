@@ -106,11 +106,23 @@ img {
 
    &-content {
       display: flex;
-      max-height: 848px;
+      
+         @media screen and (max-width: 1050px) {
+            max-height: none;
+            flex-wrap: wrap;
+            flex-direction: column;
+         }
          &-image {
             position: relative;
+            @media screen and (max-width: 1050px) {
+               order: 1;
+               display: flex;
+               justify-content: center;
+               margin-bottom: 6%;
+            }
                img {
                   height: auto;
+                  max-height: 100vh;
                }
          }
          &-text {
@@ -122,6 +134,11 @@ img {
             position: relative;
             right: -4%;
             z-index: 1;
+            @media screen and (max-width: 1050px) {
+               order: 2;
+               width: 90%;
+               margin-left: 0;
+            }
          }
 
       &__title {
@@ -139,15 +156,19 @@ img {
 
       &__text {
          font-size: get-rem(14);
+
          
          width: 60%;
          color: rgba(27, 26, 23, 0.82);
          margin-bottom: 15%;
+         @media screen and (max-width: 1050px) {
+            margin-bottom: 5%;
+         }
       }
 
       &__btn {
          background-color: #444240;
-         padding: 6%;
+         
          font-size: get-rem(12);
          letter-spacing: 0.05em;
          max-width: 205px;
@@ -171,6 +192,9 @@ img {
       position: absolute;
             left: 7.5%;
             bottom: 22.5%;
+            @media screen and (max-width: 1050px) {
+               left: 4%;
+            }
             &:after {
                @include line;
                left: 110%;
@@ -266,7 +290,7 @@ h2 {
 }
 
 .popular {
-   padding-bottom: 70px;
+   padding: 8% 0;
    .container {
       padding: 0 6.1%;
    }
@@ -709,7 +733,7 @@ h2 {
                letter-spacing: 0.07em;
                color: #fff;
                padding-top: 10px;
-               margin-bottom: 26px;
+               
                @media screen and (max-width: 745px){
                   padding: 0;
                   font-size: 12px;
@@ -785,6 +809,7 @@ h2 {
          }
    }
    .popular {
+      padding-top: 10%;
       &-watches {
          &-content {
             padding-left: 0;

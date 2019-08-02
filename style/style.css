@@ -90,15 +90,42 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-height: 848px;
+}
+
+@media screen and (max-width: 1050px) {
+  .introduction-content {
+    max-height: none;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .introduction-content-image {
   position: relative;
 }
 
+@media screen and (max-width: 1050px) {
+  .introduction-content-image {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 6%;
+  }
+}
+
 .introduction-content-image img {
   height: auto;
+  max-height: 100vh;
 }
 
 .introduction-content-text {
@@ -119,6 +146,16 @@ img {
   z-index: 1;
 }
 
+@media screen and (max-width: 1050px) {
+  .introduction-content-text {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 90%;
+    margin-left: 0;
+  }
+}
+
 .introduction-content__title {
   font-size: 2.8125rem;
   display: inline-block;
@@ -136,9 +173,14 @@ img {
   margin-bottom: 15%;
 }
 
+@media screen and (max-width: 1050px) {
+  .introduction-content__text {
+    margin-bottom: 5%;
+  }
+}
+
 .introduction-content__btn {
   background-color: #444240;
-  padding: 6%;
   font-size: 0.75rem;
   letter-spacing: 0.05em;
   max-width: 205px;
@@ -168,6 +210,12 @@ img {
   position: absolute;
   left: 7.5%;
   bottom: 22.5%;
+}
+
+@media screen and (max-width: 1050px) {
+  .introduction-size {
+    left: 4%;
+  }
 }
 
 .introduction-size:after {
@@ -282,7 +330,7 @@ h2 {
 }
 
 .popular {
-  padding-bottom: 70px;
+  padding: 8% 0;
 }
 
 .popular .container {
@@ -891,7 +939,6 @@ h2 {
   letter-spacing: 0.07em;
   color: #fff;
   padding-top: 10px;
-  margin-bottom: 26px;
 }
 
 @media screen and (max-width: 745px) {
@@ -950,6 +997,9 @@ h2 {
   }
   .introduction-content__text {
     width: 100%;
+  }
+  .popular {
+    padding-top: 10%;
   }
   .popular-watches-content {
     padding-left: 0;
