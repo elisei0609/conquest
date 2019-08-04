@@ -11,6 +11,8 @@
    <link rel="stylesheet" href="style/normalize.css">
    <link rel="stylesheet" href="style/style.css">
    <link rel="stylesheet" href="style/catalog.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
@@ -61,10 +63,82 @@
             </ul>
          </div>
          <section class="catalog">
+            <h2 class="catalog-filter-title">Мужские часы</h2>
+            <div class="catalog-filters">
+               <button class="catalog-filters__filter btn">Фильтр <i class="fa fas fa-filter"></i></button>
+              <div class="catalog-select-container">
+                  <p>Сортировать по:</p>
+                  <select name="catalog-select" id="catalog-select" class="catalog-filters__select">
+                     
+                     <option value="popular" class="catalog-select__option">популярности</option>
+                     <option value="toMax" class="catalog-select__option">от дорогих</option>
+                     <option value="toMin" class="catalog-select__option">от дешевых</option>
+                  </select>
+              </div>
+            </div>
             <div class="catalog-container">
-               <div class="catalog-filter">
-                  <h2 class="catalog-filter__title">Мужские часы</h2>
+               <div class="catalog-filter catalog-filter_active">
+                  <div class="catalog-filter-item">
+                     <h4 class="catalog-filter__title">Cтоимость
+                     </h4>
+                     <button class="catalog-filter__button catalog-filter__button_active"></button>
 
+                     <div class="catalog-filter-slider">
+                        <div id="filter-slider">
+                           <span id="left-button" class="filter-slider__dot"></span>
+                           <span id="right-button" class="filter-slider__dot"></span>
+                        </div>
+
+                        <p class="catalog-filter-slider__min">12 000</p>
+                        <p class="catalog-filter-slider__max">90 000</p>
+                     </div>
+                  </div>
+                  <div class="catalog-filter-item">
+                     <h4 class="catalog-filter__title">Бренд
+                     </h4>
+                     <button class="catalog-filter__button catalog-filter__button_active"></button>
+                     <div class="catalog-filter-list">
+                        <div class="catalog-filter-label">
+                           <input type="checkbox" name="techne" id="techne">
+                           <label for="techne">Techne</label>
+                        </div>
+                        <div class="catalog-filter-label">
+                           <input type="checkbox" name="rado" id="rado">
+                           <label for="rado">Rado</label>
+                        </div>
+                        <div class="catalog-filter-label">
+                           <input type="checkbox" name="blvgari" id="blvgari">
+                           <label for="blvgari">Blvgari</label>
+                        </div>
+                        <div class="catalog-filter-label">
+                           <input type="checkbox" name="tissot" id="tissot">
+                           <label for="tissot">Tissot</label>
+                        </div>
+                        <div class="catalog-filter-label">
+                           <input type="checkbox" name="omega" id="omega">
+                           <label for="omega">Omega</label>
+                        </div>
+                        <div class="catalog-filter-label">
+                           <input type="checkbox" name="montblanc" id="montblanc">
+                           <label for="montblanc">Montblanc</label>
+                        </div>
+
+                     </div>
+
+                  </div>
+                  <div class="catalog-filter-item">
+                     <h4 class="catalog-filter__title">Механизм</h4>
+                     <button class="catalog-filter__button"></button>
+                  </div>
+                  <div class="catalog-filter-item">
+                     <h4 class="catalog-filter__title">Материал</h4>
+                     <button class="catalog-filter__button"></button>
+                  </div>
+                  <div class="catalog-filter-item">
+                     <h4 class="catalog-filter__title">Цвет</h4>
+                     <button class="catalog-filter__button"></button>
+                  </div>
+                  <button class="catalog-filter__reset btn">Сбросить фильтр</button>
                </div>
                <div class="catalog-items">
                   <p class="catalog-items__arrow-filter">Сортировать по:</p>
@@ -86,9 +160,7 @@
                                  </button>
                               </div>
                            </div>
-                           <p class="catalog-items__price">12 700 <svg width="10" height="13" viewBox="0 0 10 13">
-                                 <use xlink:href="#ruble-svg"></use>
-                              </svg></p>
+                           <p class="catalog-items__price">12 700 ₽</p>
                            <img src="img/watch1.png" alt="techne" class="catalog-items__img">
                         </div>
                      </a>
@@ -109,9 +181,7 @@
                                  </button>
                               </div>
                            </div>
-                           <p class="catalog-items__price">12 700 <svg width="10" height="13" viewBox="0 0 10 13">
-                                 <use xlink:href="#ruble-svg"></use>
-                              </svg></p>
+                           <p class="catalog-items__price">12 700 ₽</p>
                            <img src="img/watch2.png" alt="techne" class="catalog-items__img">
                         </div>
                      </a>
@@ -132,9 +202,7 @@
                                  </button>
                               </div>
                            </div>
-                           <p class="catalog-items__price">15 700 <svg width="10" height="13" viewBox="0 0 10 13">
-                                 <use xlink:href="#ruble-svg"></use>
-                              </svg></p>
+                           <p class="catalog-items__price">15 700 ₽</p>
                            <img src="img/watch3.png" alt="techne" class="catalog-items__img">
                         </div>
                      </a>
@@ -155,9 +223,7 @@
                                  </button>
                               </div>
                            </div>
-                           <p class="catalog-items__price">15 700 <svg width="10" height="13" viewBox="0 0 10 13">
-                                 <use xlink:href="#ruble-svg"></use>
-                              </svg></p>
+                           <p class="catalog-items__price">15 700 ₽</p>
                            <img src="img/watch4.png" alt="techne" class="catalog-items__img">
                         </div>
                      </a>
@@ -178,9 +244,7 @@
                                  </button>
                               </div>
                            </div>
-                           <p class="catalog-items__price">12 700 <svg width="10" height="13" viewBox="0 0 10 13">
-                                 <use xlink:href="#ruble-svg"></use>
-                              </svg></p>
+                           <p class="catalog-items__price">12 700 ₽</p>
                            <img src="img/watch5.png" alt="techne" class="catalog-items__img">
                         </div>
                      </a>
@@ -201,16 +265,14 @@
                                  </button>
                               </div>
                            </div>
-                           <p class="catalog-items__price">15 700 <svg width="10" height="13" viewBox="0 0 10 13">
-                                 <use xlink:href="#ruble-svg"></use>
-                              </svg></p>
+                           <p class="catalog-items__price">15 700 ₽</p>
                            <img src="img/watch6.png" alt="techne" class="catalog-items__img">
                         </div>
                      </a>
                      <a href="#" class="catalog-items-item">
                         <div class="catalog-items-container">
                            <div class="catalog-items-buttons">
-                              <h3 class="catalog-items__brand">Techne</h3>
+                              <h3 class="catalog-items__brand">Rado</h3>
                               <div class="catalog-items-social">
                                  <button href="#">
                                     <svg width="21" height="18" viewBox="0 0 21 18">
@@ -224,16 +286,14 @@
                                  </button>
                               </div>
                            </div>
-                           <p class="catalog-items__price">15 700 <svg width="10" height="13" viewBox="0 0 10 13">
-                                 <use xlink:href="#ruble-svg"></use>
-                              </svg></p>
+                           <p class="catalog-items__price">15 700 ₽</p>
                            <img src="img/watch7.png" alt="techne" class="catalog-items__img">
                         </div>
                      </a>
                      <a href="#" class="catalog-items-item">
                         <div class="catalog-items-container">
                            <div class="catalog-items-buttons">
-                              <h3 class="catalog-items__brand">Techne</h3>
+                              <h3 class="catalog-items__brand">Blvgardi</h3>
                               <div class="catalog-items-social">
                                  <button href="#">
                                     <svg width="21" height="18" viewBox="0 0 21 18">
@@ -247,9 +307,7 @@
                                  </button>
                               </div>
                            </div>
-                           <p class="catalog-items__price">15 700 <svg width="10" height="13" viewBox="0 0 10 13">
-                                 <use xlink:href="#ruble-svg"></use>
-                              </svg></p>
+                           <p class="catalog-items__price">15 700 ₽</p>
                            <img src="img/watch8.png" alt="techne" class="catalog-items__img">
                         </div>
                      </a>
@@ -270,9 +328,7 @@
                                  </button>
                               </div>
                            </div>
-                           <p class="catalog-items__price">15 700 <svg width="10" height="13" viewBox="0 0 10 13">
-                                 <use xlink:href="#ruble-svg"></use>
-                              </svg></p>
+                           <p class="catalog-items__price">15 700 ₽</p>
                            <img src="img/watch9.png" alt="techne" class="catalog-items__img">
                         </div>
                      </a>
@@ -293,16 +349,14 @@
                                  </button>
                               </div>
                            </div>
-                           <p class="catalog-items__price">15 700 <svg width="10" height="13" viewBox="0 0 10 13">
-                                 <use xlink:href="#ruble-svg"></use>
-                              </svg></p>
+                           <p class="catalog-items__price">15 700 ₽</p>
                            <img src="img/watch10.png" alt="techne" class="catalog-items__img">
                         </div>
                      </a>
                      <a href="#" class="catalog-items-item">
                         <div class="catalog-items-container">
                            <div class="catalog-items-buttons">
-                              <h3 class="catalog-items__brand">Techne</h3>
+                              <h3 class="catalog-items__brand">Rado</h3>
                               <div class="catalog-items-social">
                                  <button href="#">
                                     <svg width="21" height="18" viewBox="0 0 21 18">
@@ -316,16 +370,14 @@
                                  </button>
                               </div>
                            </div>
-                           <p class="catalog-items__price">15 700 <svg width="10" height="13" viewBox="0 0 10 13">
-                                 <use xlink:href="#ruble-svg"></use>
-                              </svg></p>
+                           <p class="catalog-items__price">15 700 ₽</p>
                            <img src="img/watch11.png" alt="techne" class="catalog-items__img">
                         </div>
                      </a>
+                  </div>
                </div>
             </div>
-      </div>
-      </section>
+         </section>
       </div>
    </main>
 
@@ -357,6 +409,7 @@
          <path d="M2.00006 0V13M0.30957 9.69472H6.80958" stroke="#1B1A17" />
       </symbol>
    </svg>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
 </body>
 
 </html>

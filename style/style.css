@@ -3,6 +3,10 @@
           box-sizing: border-box;
 }
 
+html {
+  overflow: visible;
+}
+
 body {
   color: #1B1A17;
   background-color: #FDFDFB;
@@ -537,6 +541,7 @@ h2 {
      object-fit: contain;
   display: inline-block;
   height: auto;
+  overflow: hidden;
 }
 
 .link-container {
@@ -1006,11 +1011,23 @@ h2 {
   .popular {
     padding-top: 10%;
   }
+  .popular-title {
+    margin-bottom: 15px;
+  }
   .popular-watches-content {
     padding-left: 0;
   }
   .popular-watches__item {
     width: 100%;
+  }
+  .popular-watches__item h3 {
+    font-size: 14px;
+  }
+  .popular-watches__item p {
+    font-size: 12px;
+  }
+  .popular-watches__item a {
+    font-size: 12px;
   }
   .popular-watches__item_big .popular-watches__more {
     margin-left: 55%;
