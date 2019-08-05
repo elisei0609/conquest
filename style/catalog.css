@@ -354,6 +354,8 @@
 
 .catalog-items-container {
   display: block;
+  position: relative;
+  max-width: 252px;
 }
 
 .catalog-items img {
@@ -382,7 +384,11 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 22%;
+  width: 50px;
+  position: absolute;
+  z-index: 5;
+  top: 1%;
+  right: 0;
 }
 
 .catalog-items-social button {
