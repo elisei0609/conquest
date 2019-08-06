@@ -5,6 +5,10 @@ $color: #1B1A17;
 
 .btn {
    color: inherit;
+      &:hover {
+         color: #fff;
+         background-color: #000;
+      }
 }
 
 .header {
@@ -73,7 +77,8 @@ $color: #1B1A17;
 
          &:last-child {
 
-            &:before,&:after {
+            &:before,
+            &:after {
                display: none;
             }
          }
@@ -173,7 +178,7 @@ $color: #1B1A17;
    }
 
    &-filter {
-
+      height: fit-content;
       width: 20%;
 
       @media screen and (max-width: 601px) {
@@ -349,11 +354,13 @@ $color: #1B1A17;
          position: absolute;
          z-index: 5;
          top: 1%;
-         right: 0;
+         right: 20%;
 
          button {
             position: relative;
             z-index: 10;
+
+
          }
       }
    }
@@ -396,3 +403,42 @@ $color: #1B1A17;
 
    }
 }
+
+.elem:hover {
+   animation: 1.2s ease-in-out 0s normal none infinite running trambling-animation;
+}
+
+@keyframes trambling-animation {
+
+   0%,
+   50%,
+   100% {
+      transform: rotate(0deg);
+   }
+
+   10%,
+   30% {
+      transform: rotate(-10deg);
+   }
+
+   20%,
+   40% {
+      transform: rotate(10deg);
+   }
+}
+
+.like {
+   fill: #1B1A17;
+   stroke: #1B1A17;
+}
+.like svg {
+   fill: #1B1A17;
+   stroke: #1B1A17;
+   
+      &:hover {
+         stroke: red
+
+      }
+}
+   
+            

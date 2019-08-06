@@ -319,6 +319,11 @@ button {
   font-size: 0.75rem;
 }
 
+.btn:hover {
+  color: #fff;
+  background-color: #000;
+}
+
 p {
   font-family: 'Roboto', sans-serif;
 }

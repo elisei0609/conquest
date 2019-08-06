@@ -2,6 +2,11 @@
   color: inherit;
 }
 
+.btn:hover {
+  color: #fff;
+  background-color: #000;
+}
+
 .header {
   padding-top: 2%;
   color: #555248;
@@ -196,6 +201,9 @@
 }
 
 .catalog-filter {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   width: 20%;
 }
 
@@ -388,7 +396,7 @@
   position: absolute;
   z-index: 5;
   top: 1%;
-  right: 0;
+  right: 20%;
 }
 
 .catalog-items-social button {
@@ -422,5 +430,62 @@
     font-size: 18px;
     margin-left: 5px;
   }
+}
+
+.elem:hover {
+  -webkit-animation: 1.2s ease-in-out 0s normal none infinite running trambling-animation;
+          animation: 1.2s ease-in-out 0s normal none infinite running trambling-animation;
+}
+
+@-webkit-keyframes trambling-animation {
+  0%,
+  50%,
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  10%,
+  30% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  20%,
+  40% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+}
+
+@keyframes trambling-animation {
+  0%,
+  50%,
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  10%,
+  30% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  20%,
+  40% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+}
+
+.like {
+  fill: #1B1A17;
+  stroke: #1B1A17;
+}
+
+.like svg {
+  fill: #1B1A17;
+  stroke: #1B1A17;
+}
+
+.like svg:hover {
+  stroke: red;
 }
 /*# sourceMappingURL=catalog.css.map */

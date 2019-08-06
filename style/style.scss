@@ -275,6 +275,11 @@ button {
    color: #fff;
    text-transform: uppercase;
    font-size: get-rem(12);
+      
+      &:hover {
+         color: #fff;
+         background-color: #000;
+      }
 }
 
 p {
