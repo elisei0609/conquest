@@ -5,10 +5,11 @@ $color: #1B1A17;
 
 .btn {
    color: inherit;
-      &:hover {
-         color: #fff;
-         background-color: #000;
-      }
+
+   &:hover {
+      color: #fff;
+      background-color: #000;
+   }
 }
 
 .header {
@@ -121,13 +122,14 @@ $color: #1B1A17;
 
       p {
          margin-right: 5px;
+         color: #BDB9B5;
       }
    }
 
    &-container {
       display: flex;
 
-      @media screen and (max-width: 601px) {
+      @media screen and (max-width: 768px) {
          flex-wrap: wrap;
          justify-content: center;
 
@@ -139,11 +141,17 @@ $color: #1B1A17;
       color: $color;
       display: none;
 
-      @media screen and (max-width: 601px) {
+      @media screen and (max-width: 768px) {
          display: flex;
          align-items: center;
          justify-content: space-evenly;
+         flex-wrap: wrap;
 
+      }
+
+      &__select {
+         font-size: 15px;
+         border: 0;
       }
    }
 
@@ -181,8 +189,8 @@ $color: #1B1A17;
       height: fit-content;
       width: 20%;
 
-      @media screen and (max-width: 601px) {
-         width: 80%;
+      @media screen and (max-width: 768px) {
+         width: 90%;
       }
 
       &-label {
@@ -221,14 +229,13 @@ $color: #1B1A17;
             }
 
          }
+         
 
-         &-title {
-
-            @media screen and (max-width: 601px) {
-               margin-bottom: 16px;
-            }
-         }
       }
+            &-title {
+               margin: 3.2% 0;
+               
+            }
 
       &__button {
          display: inline-block;
@@ -303,17 +310,28 @@ $color: #1B1A17;
       flex: 1 1 0;
       padding-left: 8.10%;
 
+         @media screen and (max-width: 768px){
+            padding: 0;
+         }
       &-list {
          display: flex;
          flex-wrap: wrap;
       }
 
-      &__arrow-filter {
-         text-align: right;
-         margin-bottom: 5%;
+      &__arrow {
+         display: flex;
+         width: 92%;
+         height: auto;
+         align-items: flex-start;
+         justify-content: flex-end;
+         margin-bottom: 2%;
 
-         @media screen and (max-width: 601px) {
+         @media screen and (max-width: 768px) {
             display: none;
+         }
+
+         &-filter {
+            color: #BDB9B5;
          }
       }
 
@@ -325,12 +343,19 @@ $color: #1B1A17;
          @media screen and (max-width: 1050px) {
             width: 50%;
          }
+         @media screen and (max-width: 420px) {
+            width: 100%;
+            .catalog-items-social {
+               right: 0;
+            }
+         }
       }
 
       &-container {
          display: block;
          position: relative;
          max-width: 252px;
+         margin: 0 auto;
       }
 
       img {
@@ -366,7 +391,7 @@ $color: #1B1A17;
    }
 }
 
-@media screen and (max-width: 601px) {
+@media screen and (max-width: 768px) {
    .catalog {
       &-filter {
          display: none;
@@ -374,15 +399,18 @@ $color: #1B1A17;
          &_active {
             display: block;
             margin-bottom: 20px;
+            position: absolute;
+            background: #fff;
+            z-index: 20;
          }
 
-         &-title {
-            margin-bottom: 10px;
-         }
+        
       }
 
       &-filters {
          margin-bottom: 15px;
+
+
 
          &__filter {
             display: flex;
@@ -431,14 +459,12 @@ $color: #1B1A17;
    fill: #1B1A17;
    stroke: #1B1A17;
 }
+
 .like svg {
    fill: #1B1A17;
    stroke: #1B1A17;
-   
-      &:hover {
-         stroke: red
 
-      }
+   &:hover {
+      stroke: red
+   }
 }
-   
-            
