@@ -17,8 +17,7 @@ $color: #1B1A17;
    color: #555248;
    font-size: 14px;
    margin: 0 auto;
-
-   .container {}
+   max-width: inherit;
 
    &-buttons {
       display: flex;
@@ -467,4 +466,8 @@ $color: #1B1A17;
    &:hover {
       stroke: red
    }
+}
+.hide {
+   display: none;
+   visibility: hidden;
 }

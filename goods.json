@@ -2,57 +2,68 @@
    "techne1" : {
       "name" : "Techne",
       "cost" : "12 700 ₽",
-      "image" : "img/watch1.png"
+      "image" : "img/watch1.png",
+      "index" : "techne"
    },
    "techne2" : {
       "name" : "Techne",
       "cost" : "12 700 ₽",
-      "image" : "img/watch2.png"
+      "image" : "img/watch2.png",
+      "index" : "techne"
    },
    "techne3" : {
       "name" : "Techne",
       "cost" : "15 700 ₽",
-      "image" : "img/watch3.png"
+      "image" : "img/watch3.png",
+      "index" : "techne"
    },
    "techne4" : {
       "name" : "Techne",
       "cost" : "15 700 ₽",
-      "image" : "img/watch4.png"
+      "image" : "img/watch4.png",
+      "index" : "techne"
    },
    "techne5" : {
       "name" : "Techne",
       "cost" : "12 700 ₽",
-      "image" : "img/watch5.png"
+      "image" : "img/watch5.png",
+      "index" : "techne"
    },
    "techne6" : {
       "name" : "Techne",
       "cost" : "18 500 ₽",
-      "image" : "img/watch6.png"
+      "image" : "img/watch6.png",
+      "index" : "techne"
    },
    "techne7" : {
       "name" : "Techne",
       "cost" : "15 700 ₽",
-      "image" : "img/watch7.png"
+      "image" : "img/watch7.png",
+      "index" : "techne"
    },
    "rado1" : {
       "name" : "Rado",
       "cost" : "14 700 ₽",
-      "image" : "img/watch8.png"
+      "image" : "img/watch8.png",
+      "index" : "rado"
    },
    "blvgardi1" : {
       "name" : "Blvgardi",
       "cost" : "72 700 ₽",
-      "image" : "img/watch9.png"
+      "image" : "img/watch9.png",
+      "index" : "blvgardi"
    },
    "techne8" : {
       "name" : "Techne",
       "cost" : "22 700 ₽",
-      "image" : "img/watch10.png"
+      "image" : "img/watch10.png",
+      "index" : "techne"
    },
    "rado2" : {
       "name" : "Techne",
       "cost" : "22 000 ₽",
-      "image" : "img/watch11.png"
+      "image" : "img/watch11.png",
+      "index" : "rado"
    }
    
    

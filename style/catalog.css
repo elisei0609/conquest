@@ -12,6 +12,7 @@
   color: #555248;
   font-size: 14px;
   margin: 0 auto;
+  max-width: inherit;
 }
 
 .header-buttons {
@@ -523,5 +524,10 @@
 
 .like svg:hover {
   stroke: red;
+}
+
+.hide {
+  display: none;
+  visibility: hidden;
 }
 /*# sourceMappingURL=catalog.css.map */

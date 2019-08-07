@@ -8,7 +8,7 @@ function loadGoods() {
        //console.log(data);
        var out = '';
        for (var key in data){
-           out+= '<a href="#" class="catalog-items-item">';
+           out+= '<a href="#" class="catalog-items-item" index="'+ data[key].index +'">';
            out+= '<div class="catalog-items-container">';
            out+= '<div class="catalog-items__name">';
            out+= '<h3 class="catalog-items__brand">' + data[key]['name'] + '</h3>';
@@ -37,3 +37,15 @@ function loadGoods() {
        $('#goods').html(out);
    })
 }
+
+$('#techne').on('click', ()=> {
+    $('[index = "techne"]').toggleClass('hide');
+});
+
+$('#rado').on('click', ()=> {
+    $('[index = "rado"]').toggleClass('hide');
+});
+
+$('#blvgardi').on('click', ()=> {
+    $('[index = "blvgardi"]').toggleClass('hide');
+});
