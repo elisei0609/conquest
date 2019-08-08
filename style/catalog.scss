@@ -145,7 +145,7 @@ $color: #1B1A17;
          align-items: center;
          justify-content: space-evenly;
          flex-wrap: wrap;
-         border-bottom: 1px solid;
+         border-bottom: 1px solid #eaeaea;
          padding-bottom: 10px;
 
       }
@@ -153,6 +153,22 @@ $color: #1B1A17;
       &__select {
          font-size: 15px;
          border: 0;
+      }
+   }
+
+   &-pagination {
+      display: flex;
+      justify-content: flex-end;
+         @media screen and (max-width: 768px){
+            justify-content: center;
+         }
+
+      &-list {
+         display: flex;
+         margin: 0 15px;
+         width: 80px;
+         justify-content: space-between;
+
       }
    }
 
@@ -311,15 +327,18 @@ $color: #1B1A17;
 
    &-items {
       flex: 1 1 0;
-      padding-left: 8.10%;
+      margin-left: 8.10%;
+      border-left: 1px solid #eaeaea;
 
       @media screen and (max-width: 768px) {
          padding: 0;
+         margin-left: 0;
       }
 
       &-list {
          display: flex;
          flex-wrap: wrap;
+         margin-bottom: 5%;
       }
 
       &__arrow {
@@ -343,6 +362,8 @@ $color: #1B1A17;
          width: 33.3%;
          padding: 0 20px;
          max-height: 300px;
+         border-right: 1px solid #eaeaea;
+         border-bottom: 1px solid #eaeaea;
 
          @media screen and (max-width: 1050px) {
             width: 50%;
@@ -385,7 +406,7 @@ $color: #1B1A17;
          position: absolute;
          z-index: 5;
          top: 1%;
-         right: 20%;
+         right: 0%;
 
          button {
             position: relative;

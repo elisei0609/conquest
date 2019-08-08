@@ -1052,4 +1052,8 @@ h2 {
     padding-left: 0;
   }
 }
+
+i.fa-chevron-right, i.fa-chevron-left {
+  font-size: 13px;
+}
 /*# sourceMappingURL=style.css.map */
