@@ -145,6 +145,8 @@ $color: #1B1A17;
          align-items: center;
          justify-content: space-evenly;
          flex-wrap: wrap;
+         border-bottom: 1px solid;
+         padding-bottom: 10px;
 
       }
 
@@ -158,6 +160,7 @@ $color: #1B1A17;
       display: inline-block;
       position: relative;
       width: 100%;
+      max-width: 50vw;
       height: 1.2px;
       background-color: $color;
 
@@ -228,13 +231,14 @@ $color: #1B1A17;
             }
 
          }
-         
+
 
       }
-            &-title {
-               margin: 3.2% 0;
-               
-            }
+
+      &-title {
+         margin: 3.2% 0;
+
+      }
 
       &__button {
          display: inline-block;
@@ -309,9 +313,10 @@ $color: #1B1A17;
       flex: 1 1 0;
       padding-left: 8.10%;
 
-         @media screen and (max-width: 768px){
-            padding: 0;
-         }
+      @media screen and (max-width: 768px) {
+         padding: 0;
+      }
+
       &-list {
          display: flex;
          flex-wrap: wrap;
@@ -342,8 +347,10 @@ $color: #1B1A17;
          @media screen and (max-width: 1050px) {
             width: 50%;
          }
+
          @media screen and (max-width: 420px) {
             width: 100%;
+
             .catalog-items-social {
                right: 0;
             }
@@ -393,42 +400,44 @@ $color: #1B1A17;
 @media screen and (max-width: 768px) {
    .catalog {
       &-filter {
-         display: none;
 
-         &_active {
-            display: block;
+         &_disable {
             margin-bottom: 20px;
             position: absolute;
             background: #fff;
             z-index: 20;
-         }
-
-        
+               
+            @media screen and (max-width: 768px){
+               display: none;
+            }
       }
 
-      &-filters {
-         margin-bottom: 15px;
+
+   }
+
+   &-filters {
+      margin-bottom: 15px;
 
 
 
-         &__filter {
-            display: flex;
-            border: 2px solid #E7E0CF;
-            padding: 10px;
+      &__filter {
+         display: flex;
+         border: 2px solid #E7E0CF;
+         padding: 10px;
 
-            i {
+         i {
 
-               &:before {
-                  color: #69c;
-                  font-size: 18px;
-                  margin-left: 5px;
+            &:before {
+               color: #69c;
+               font-size: 18px;
+               margin-left: 5px;
 
-               }
             }
          }
       }
-
    }
+
+}
 }
 
 .elem:hover {
@@ -466,11 +475,24 @@ $color: #1B1A17;
    &:hover {
       stroke: red
    }
+
+}
+
+.redFill {
+   svg {
+      stroke: red;
+   }
+}
+
+.show {
+   display: block;
+   
+}
+
+.disabled {
+   opacity: 0.5;
 }
 .hide {
    display: none;
-   visibility: hidden;
-}
-.disabled {
-   opacity: 0.5;
+   visibility: none;
 }

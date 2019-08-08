@@ -37,7 +37,8 @@ function loadGoods() {
         }
         goods.innerHTML = out;
     })
-}
+};
+
 
 $('#techne').on('click', () => {
     $('[data-index = "techne"]').toggleClass('hide');
@@ -122,4 +123,25 @@ function makeArr() {
         arr.push(goods[i]);
     }
     return (arr)
+}
+
+// (function () {
+//     var b = document.getElementsByClassName('like')
+//     console.log(b)
+//     for (var i = 0; i < b.length; i++) {
+//         b[i].addEventListener('click', function () {
+//             b[i].classList.toggle('redFill')
+//         })
+//     }
+  
+// })();
+
+(function () {
+    document.getElementById('filter').addEventListener('click', function () {
+        document.getElementById('filter-block').classList.toggle('show')
+    })
+
+})()
+function hide() {
+
 }
