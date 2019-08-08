@@ -328,7 +328,7 @@ $color: #1B1A17;
    &-items {
       flex: 1 1 0;
       margin-left: 8.10%;
-      border-left: 1px solid #eaeaea;
+      
 
       @media screen and (max-width: 768px) {
          padding: 0;
@@ -339,6 +339,7 @@ $color: #1B1A17;
          display: flex;
          flex-wrap: wrap;
          margin-bottom: 5%;
+         border-left: 1px solid #eaeaea;
       }
 
       &__arrow {

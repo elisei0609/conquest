@@ -365,7 +365,6 @@
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
   margin-left: 8.10%;
-  border-left: 1px solid #eaeaea;
 }
 
 @media screen and (max-width: 768px) {
@@ -382,6 +381,7 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-bottom: 5%;
+  border-left: 1px solid #eaeaea;
 }
 
 .catalog-items__arrow {
