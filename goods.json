@@ -1,69 +1,81 @@
 {
    "techne1" : {
       "name" : "Techne",
-      "cost" : "12 700 ₽",
+      "cost" : "12 700",
       "image" : "img/watch1.png",
-      "index" : "techne"
+      "data-index" : "techne",
+      "priority" : "14"
+      
    },
    "techne2" : {
       "name" : "Techne",
-      "cost" : "12 700 ₽",
+      "cost" : "12 700",
       "image" : "img/watch2.png",
-      "index" : "techne"
+      "data-index" : "techne",
+      "priority" : "4"
    },
    "techne3" : {
       "name" : "Techne",
-      "cost" : "15 700 ₽",
+      "cost" : "15 700",
       "image" : "img/watch3.png",
-      "index" : "techne"
+      "data-index" : "techne",
+      "priority" : "5"
    },
    "techne4" : {
       "name" : "Techne",
-      "cost" : "15 700 ₽",
+      "cost" : "15 700",
       "image" : "img/watch4.png",
-      "index" : "techne"
+      "data-index" : "techne",
+      "priority" : "2"
    },
    "techne5" : {
       "name" : "Techne",
-      "cost" : "12 700 ₽",
+      "cost" : "12 700",
       "image" : "img/watch5.png",
-      "index" : "techne"
+      "data-index" : "techne",
+      "priority" : "7"
    },
    "techne6" : {
       "name" : "Techne",
-      "cost" : "18 500 ₽",
+      "cost" : "18 500",
       "image" : "img/watch6.png",
-      "index" : "techne"
+      "data-index" : "techne",
+      "priority" : "8"
    },
    "techne7" : {
       "name" : "Techne",
-      "cost" : "15 700 ₽",
+      "cost" : "15 700",
       "image" : "img/watch7.png",
-      "index" : "techne"
+      "data-index" : "techne",
+      "priority" : "6"
    },
    "rado1" : {
       "name" : "Rado",
-      "cost" : "14 700 ₽",
+      "cost" : "14 700",
       "image" : "img/watch8.png",
-      "index" : "rado"
+      "data-index" : "rado",
+      "priority" : "1"
    },
    "blvgardi1" : {
       "name" : "Blvgardi",
-      "cost" : "72 700 ₽",
+      "cost" : "72 700",
       "image" : "img/watch9.png",
-      "index" : "blvgardi"
+      "data-index" : "blvgardi",
+      "priority" : "10"
    },
    "techne8" : {
       "name" : "Techne",
-      "cost" : "22 700 ₽",
+      "cost" : "22 700",
       "image" : "img/watch10.png",
-      "index" : "techne"
+      "data-index" : "techne",
+      "priority" : "12"
    },
    "rado2" : {
-      "name" : "Techne",
-      "cost" : "22 000 ₽",
+      "name" : "Rado",
+      "cost" : "22 000",
       "image" : "img/watch11.png",
-      "index" : "rado"
+      "data-index" : "rado",
+      "priority" : "3"
    }
    
    
