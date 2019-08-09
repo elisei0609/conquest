@@ -375,6 +375,19 @@
   }
 }
 
+.catalog-items__brand {
+  font-family: 'Roboto';
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.catalog-items__price {
+  font-size: 14px;
+}
+
 .catalog-items-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -412,10 +425,11 @@
 
 .catalog-items-item {
   width: 33.3%;
-  padding: 0 20px;
+  padding: 20px;
   max-height: 300px;
   border-right: 1px solid #eaeaea;
   border-bottom: 1px solid #eaeaea;
+  font-family: 'Roboto';
 }
 
 @media screen and (max-width: 1050px) {
@@ -629,6 +643,85 @@
   .subscription-form__btn {
     width: 100%;
   }
+}
+
+.bands {
+  padding: 5% 0;
+}
+
+.bands-introduction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-bottom: 3.4%;
+}
+
+.bands-catalog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.bands-catalog-item {
+  width: 31%;
+  padding: 20px 20px;
+  background: #e5e5ff33;
+}
+
+.bands-items-container {
+  position: relative;
+}
+
+.bands-items-container img {
+  display: block;
+  margin: 0 auto;
+  max-height: 290px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.bands-items-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  z-index: 15;
+  top: 1%;
+  right: 0;
+  width: 50px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.bands-items__brand {
+  margin-bottom: 5px;
+  font-family: 'Roboto';
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.bands-items__price {
+  font-size: 14px;
+}
+
+.bands__all {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #C4C0B6;
 }
 
 .elem:hover {
