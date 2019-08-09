@@ -1,82 +1,125 @@
 {
-   "techne1" : {
-      "name" : "Techne",
-      "cost" : "12 700",
-      "image" : "img/watch1.png",
-      "data-index" : "techne",
-      "priority" : "14"
-      
+   "items": {
+      "techne1": {
+         "name": "Techne",
+         "cost": "12 700",
+         "image": "img/watch1.png",
+         "data-index": "techne",
+         "priority": "14"
+      },
+      "techne2": {
+         "name": "Techne",
+         "cost": "12 700",
+         "image": "img/watch2.png",
+         "data-index": "techne",
+         "priority": "4"
+      },
+      "techne3": {
+         "name": "Techne",
+         "cost": "15 700",
+         "image": "img/watch3.png",
+         "data-index": "techne",
+         "priority": "5"
+      },
+      "techne4": {
+         "name": "Techne",
+         "cost": "15 700",
+         "image": "img/watch4.png",
+         "data-index": "techne",
+         "priority": "2"
+      },
+      "techne5": {
+         "name": "Techne",
+         "cost": "12 700",
+         "image": "img/watch5.png",
+         "data-index": "techne",
+         "priority": "7"
+      },
+      "techne6": {
+         "name": "Techne",
+         "cost": "18 500",
+         "image": "img/watch6.png",
+         "data-index": "techne",
+         "priority": "8"
+      },
+      "techne7": {
+         "name": "Techne",
+         "cost": "15 700",
+         "image": "img/watch7.png",
+         "data-index": "techne",
+         "priority": "6"
+      },
+      "rado1": {
+         "name": "Rado",
+         "cost": "14 700",
+         "image": "img/watch8.png",
+         "data-index": "rado",
+         "priority": "1"
+      },
+      "blvgardi1": {
+         "name": "Blvgardi",
+         "cost": "72 700",
+         "image": "img/watch9.png",
+         "data-index": "blvgardi",
+         "priority": "10"
+      },
+      "techne8": {
+         "name": "Techne",
+         "cost": "22 700",
+         "image": "img/watch10.png",
+         "data-index": "techne",
+         "priority": "12"
+      },
+      "rado2": {
+         "name": "Rado",
+         "cost": "22 000",
+         "image": "img/watch11.png",
+         "data-index": "rado",
+         "priority": "3"
+      }
    },
-   "techne2" : {
-      "name" : "Techne",
-      "cost" : "12 700",
-      "image" : "img/watch2.png",
-      "data-index" : "techne",
-      "priority" : "4"
-   },
-   "techne3" : {
-      "name" : "Techne",
-      "cost" : "15 700",
-      "image" : "img/watch3.png",
-      "data-index" : "techne",
-      "priority" : "5"
-   },
-   "techne4" : {
-      "name" : "Techne",
-      "cost" : "15 700",
-      "image" : "img/watch4.png",
-      "data-index" : "techne",
-      "priority" : "2"
-   },
-   "techne5" : {
-      "name" : "Techne",
-      "cost" : "12 700",
-      "image" : "img/watch5.png",
-      "data-index" : "techne",
-      "priority" : "7"
-   },
-   "techne6" : {
-      "name" : "Techne",
-      "cost" : "18 500",
-      "image" : "img/watch6.png",
-      "data-index" : "techne",
-      "priority" : "8"
-   },
-   "techne7" : {
-      "name" : "Techne",
-      "cost" : "15 700",
-      "image" : "img/watch7.png",
-      "data-index" : "techne",
-      "priority" : "6"
-   },
-   "rado1" : {
-      "name" : "Rado",
-      "cost" : "14 700",
-      "image" : "img/watch8.png",
-      "data-index" : "rado",
-      "priority" : "1"
-   },
-   "blvgardi1" : {
-      "name" : "Blvgardi",
-      "cost" : "72 700",
-      "image" : "img/watch9.png",
-      "data-index" : "blvgardi",
-      "priority" : "10"
-   },
-   "techne8" : {
-      "name" : "Techne",
-      "cost" : "22 700",
-      "image" : "img/watch10.png",
-      "data-index" : "techne",
-      "priority" : "12"
-   },
-   "rado2" : {
-      "name" : "Rado",
-      "cost" : "22 000",
-      "image" : "img/watch11.png",
-      "data-index" : "rado",
-      "priority" : "3"
+   "bands": {
+      "georgJensen1": {
+         "name": "Georg Jensen",
+         "cost": "6 500",
+         "image": "img/band_1.png",
+         "data-index": "georg jensen",
+         "priority": "1"
+      },
+      "nato1": {
+         "name": "Nato",
+         "cost": "3 200",
+         "image": "img/band_2.png",
+         "data-index": "nato",
+         "priority": "2"
+      },
+      "spark1": {
+         "name": "Spark",
+         "cost": "5 400",
+         "image": "img/band_3.png",
+         "data-index": "spark",
+         "priority": "3"
+      },
+      "spark2": {
+         "name": "Spark",
+         "cost": "8 400",
+         "image": "img/band_3.png",
+         "data-index": "spark",
+         "priority": "4"
+      },
+      "nato2": {
+         "name": "Nato",
+         "cost": "7 200",
+         "image": "img/band_2.png",
+         "data-index": "nato",
+         "priority": "5"
+      },
+      "georgJensen2": {
+         "name": "Georg Jensen",
+         "cost": "10 500",
+         "image": "img/band_1.png",
+         "data-index": "georg jensen",
+         "priority": "6"
+      }
    }
-   
-   
 }
