@@ -54,7 +54,7 @@
       <div class="container">
          <div class="pages">
             <ul class="pages-list">
-               <li class="pages-list__item">Главная</li>
+               <li class="pages-list__item"><a href="index.html">Главная</a></li>
                <li class="pages-list__item">Каталог</li>
                <li class="pages-list__item pages-list__item_active">Мужские часы</li>
             </ul>
@@ -76,11 +76,13 @@
             <div class="catalog-container">
                <div class="catalog-filter catalog-filter_disable" id="filter-block">
                   <div class="catalog-filter-item">
-                     <h4 class="catalog-filter__title">Cтоимость
-                     </h4>
-                     <button class="catalog-filter__button catalog-filter__button_active"></button>
 
-                     <div class="catalog-filter-slider">
+                     <h4 class="catalog-filter__title">Cтоимость
+                        <button class="catalog-filter__button catalog-filter__button_active" id="filterBtn"></button>
+                     </h4>
+
+
+                     <div class="catalog-filter-slider" id="filterCost">
                         <div id="filter-slider">
                            <span id="left-button" class="filter-slider__dot"></span>
                            <span id="right-button" class="filter-slider__dot"></span>
@@ -139,7 +141,7 @@
                   <div class="catalog-items__arrow">
                      <p class="catalog-items__arrow-filter">Сортировать по:</p>
                      <select name="catalog-select" id="catalog-select" class="catalog-filters__select">
-   
+
                         <option value="popular" class="catalog-select__option" id="popular">популярности</option>
                         <option value="max" class="catalog-select__option" id="expensive">от дорогих</option>
                         <option value="min" class="catalog-select__option" id="cheap">от дешевых</option>
@@ -149,19 +151,33 @@
                   </div>
                </div>
             </div>
-                  <div class="catalog-pagination">
-                     <button class="catalog-pagination__button"><i class="fas fa fa-chevron-left"></i></button>
-                     <ul class="catalog-pagination-list">
-                        <li class="catalog-pagination__item"><a href="#">1</a></li>
-                        <li class="catalog-pagination__item disabled"><a href="#">2</a></li>
-                        <li class="catalog-pagination__item disabled"><a href="#">3</a></li>
-                        <li class="catalog-pagination__item disabled"><a href="#">...</a></li>
-                        <li class="catalog-pagination__item disabled"><a href="#">12</a></li>
-                     </ul>
-                     <button class="catalog-pagination__button"><i class="fas fa fa-chevron-right"></i></button>
-                  </div>
+            <div class="catalog-pagination">
+               <button class="catalog-pagination__button"><i class="fas fa fa-chevron-left"></i></button>
+               <ul class="catalog-pagination-list">
+                  <li class="catalog-pagination__item"><a href="#">1</a></li>
+                  <li class="catalog-pagination__item disabled"><a href="#">2</a></li>
+                  <li class="catalog-pagination__item disabled"><a href="#">3</a></li>
+                  <li class="catalog-pagination__item disabled"><a href="#">...</a></li>
+                  <li class="catalog-pagination__item disabled"><a href="#">12</a></li>
+               </ul>
+               <button class="catalog-pagination__button"><i class="fas fa fa-chevron-right"></i></button>
+            </div>
          </section>
       </div>
+
+      <section class="subscription">
+         <div class="container">
+            <p class="subscription__description">Подписка на рассылку</p>
+            <form action="GET" class="subscription-form">
+               <h2 class="subscription-form__title">Получить скидку 10% на первую покупку</h2>
+               <div class="subscription-form__container">
+                  <input type="email" name="subscribe" id="subscribeEmail" class="subscription-form__input" placeholder="E-mail">
+                  <button type="submit" class="subscription-form__btn btn">Подписаться</button>
+               </div>
+            </form>
+         </div>
+      </section>
+
    </main>
 
    <svg class="visually-hidden">

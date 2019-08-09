@@ -125,23 +125,34 @@ function makeArr() {
     return (arr)
 }
 
-// (function () {
-//     var b = document.getElementsByClassName('like')
-//     console.log(b)
-//     for (var i = 0; i < b.length; i++) {
-//         b[i].addEventListener('click', function () {
-//             b[i].classList.toggle('redFill')
-//         })
-//     }
-  
-// })();
+(function () {
+    var likeArr = document.getElementsByClassName('like')
+    console.log(likeArr)
+    for (var i = 0; i < likeArr.length; i++) {
+        likeArr[i].addEventListener('click', function () {
+            console.log(this);
+            likeArr[i].classList.toggle('redFill')
+        })
+    }
+
+})();
 
 (function () {
     document.getElementById('filter').addEventListener('click', function () {
         document.getElementById('filter-block').classList.toggle('show')
     })
 
-})()
-function hide() {
+})();
 
-}
+(function () {
+        var btn = document.querySelectorAll('.catalog-filter__button');
+        console.log(btn)
+        for (var i = 0; i < btn.length; i++) {
+            btn[i].addEventListener('click', function () {
+                    btn.classList.toggle('catalog-filter__button_active');
+                    document.getElementById('filterCost').classList.toggle('hide')
+                })
+            }
+            
+
+        })()
