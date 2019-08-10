@@ -20,34 +20,47 @@
    <header class="header">
 
       <div class="container">
-         <div class="header-buttons">
-            <img src="img/logo.png" alt="conquest" class="header-buttons__logo">
-            <nav class="nav">
-               <ul class="nav-list">
-                  <li class="nav-list__item nav-list__item_active"><a href="#">Каталог</a></li>
-                  <li class="nav-list__item"><a href="#">Акции</a></li>
-                  <li class="nav-list__item"><a href="#">Доставка</a></li>
-                  <li class="nav-list__item"><a href="#">Контакты</a></li>
-               </ul>
-            </nav>
-            <div class="header-buttons-container">
-               <a class="" href="#">
-                  <svg width="16" height="16" viewBox="0 0 16 16">
-                     <use xlink:href='#search-svg'></use>
-                  </svg>
-               </a>
-               <a href="#">
-                  <svg width="21" height="18" viewBox="0 0 21 18" class="like">
-                     <use xlink:href="#love-svg"></use>
-                  </svg>
-               </a>
-               <a href="#">
-                  <svg width="18" height="16" viewBox="0 0 18 16">
-                     <use xlink:href="#box-svg"></use>
-                  </svg>
-               </a>
+         <div class="header-menu">
+            <div class="header-burger">
+               <span></span>
+            </div>
+            <div class="header-buttons">
+                  <img src="img/logo.png" alt="conquest" class="header-buttons__logo">
+               <nav class="nav">
+                  <ul class="nav-list">
+                     <li class="nav-list__item nav-list__item_active"><a href="#">Каталог</a></li>
+                     <li class="nav-list__item"><a href="#">Акции</a></li>
+                     <li class="nav-list__item"><a href="#">Доставка</a></li>
+                     <li class="nav-list__item"><a href="#">Контакты</a></li>
+                  </ul>
+               </nav>
+               <div class="header-buttons-container">
+                  <a class="" href="#">
+                     <svg width="16" height="16" viewBox="0 0 16 16">
+                        <use xlink:href='#search-svg'></use>
+                     </svg>
+                  </a>
+                  <a href="#">
+                     <svg width="21" height="18" viewBox="0 0 21 18" class="like">
+                        <use xlink:href="#love-svg"></use>
+                     </svg>
+                  </a>
+                  <a href="#">
+                     <svg width="18" height="16" viewBox="0 0 18 16">
+                        <use xlink:href="#box-svg"></use>
+                     </svg>
+                  </a>
+               </div>
             </div>
          </div>
+         <div class="menu-mobile">
+               <ul class="menu-mobile-list">
+                  <li class="menu-mobile__item"><a href="#"></a>Каталог</li>
+                  <li class="menu-mobile__item"><a href="#"></a>Акции</li>
+                  <li class="menu-mobile__item"><a href="#"></a>Доставка</li>
+                  <li class="menu-mobile__item"><a href="#"></a>Контакты</li>
+               </ul>
+            </div>
       </div>
    </header>
    <main id="main">
@@ -95,18 +108,18 @@
                   <div class="catalog-filter-item">
                      <h4 class="catalog-filter__title">Бренд
                      </h4>
-                     <button class="catalog-filter__button catalog-filter__button_active"></button>
-                     <div class="catalog-filter-list">
+                     <button class="catalog-filter__button catalog-filter__button_active" id="brandBtn"></button>
+                     <div class="catalog-filter-list" id="filterBrand">
                         <div class="catalog-filter-label">
-                           <input type="checkbox" name="techne" id="techne" checked>
+                           <input type="checkbox" name="techne" id="techne" >
                            <label for="techne">Techne</label>
                         </div>
                         <div class="catalog-filter-label">
-                           <input type="checkbox" name="rado" id="rado" checked>
+                           <input type="checkbox" name="rado" id="rado" >
                            <label for="rado">Rado</label>
                         </div>
                         <div class="catalog-filter-label">
-                           <input type="checkbox" name="blvgardi" id="blvgardi" checked>
+                           <input type="checkbox" name="blvgardi" id="blvgardi" >
                            <label for="blvgardi">Blvgari</label>
                         </div>
                         <div class="catalog-filter-label disabled">
@@ -183,7 +196,7 @@
          <div class="container">
             <div class="bands-introduction">
                <h2 class="bands__title">Ремешки</h2>
-               <a href="#" class="bands__all">Смотреть все</a>
+               <button class="bands__all">Смотреть все</button>
             </div>
             <div class="bands-catalog" id="bands">
 

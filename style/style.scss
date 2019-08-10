@@ -725,6 +725,7 @@ h2 {
          }
          &:first-child {
             .footer-column__title {
+               
                margin-bottom: 17px;
             }
          }
@@ -732,6 +733,11 @@ h2 {
          &__item {
             font-size: 12px;
            margin-top: 15px;
+            
+            &:first-child {
+               margin-top: 0;
+            }
+
             @media screen and (max-width: 745px){
                text-align: center;
             }  
@@ -868,3 +874,4 @@ h2 {
 i.fa-chevron-right, i.fa-chevron-left {
    font-size: 13px;
 }
+

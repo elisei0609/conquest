@@ -19,6 +19,10 @@ $color: #1B1A17;
    margin: 0 auto;
    max-width: inherit;
 
+   &-menu {
+      display: flex;
+   }
+
    &-buttons {
       display: flex;
       justify-content: space-between;
@@ -311,6 +315,7 @@ $color: #1B1A17;
          right: 0;
          top: 0.4%;
 
+         
          &:after {
             display: none;
          }
@@ -663,22 +668,24 @@ $color: #1B1A17;
 .like {
    fill: #1B1A17;
    stroke: #1B1A17;
-}
-
-.like svg {
-   fill: #1B1A17;
-   stroke: #1B1A17;
 
    &:hover {
       stroke: red
    }
+}
 
+.svg-heart {
+   fill: #1B1A17;
+   stroke: #1B1A17;
+
+      &:hover {
+         stroke: red;
+      }
 }
 
 .redFill {
-   svg {
-      stroke: red;
-   }
+
+    stroke: red;
 }
 
 .show {
@@ -692,5 +699,5 @@ $color: #1B1A17;
 
 .hide {
    display: none;
-   visibility: none;
+   visibility: hidden;
 }

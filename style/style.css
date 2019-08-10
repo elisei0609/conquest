@@ -938,6 +938,10 @@ h2 {
   margin-top: 15px;
 }
 
+.footer-column__item:first-child {
+  margin-top: 0;
+}
+
 @media screen and (max-width: 745px) {
   .footer-column__item {
     text-align: center;

@@ -15,6 +15,12 @@
   max-width: inherit;
 }
 
+.header-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .header-buttons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -772,16 +778,20 @@
   stroke: #1B1A17;
 }
 
-.like svg {
+.like:hover {
+  stroke: red;
+}
+
+.svg-heart {
   fill: #1B1A17;
   stroke: #1B1A17;
 }
 
-.like svg:hover {
+.svg-heart:hover {
   stroke: red;
 }
 
-.redFill svg {
+.redFill {
   stroke: red;
 }
 
@@ -795,6 +805,6 @@
 
 .hide {
   display: none;
-  visibility: none;
+  visibility: hidden;
 }
 /*# sourceMappingURL=catalog.css.map */
