@@ -1,5 +1,6 @@
 $('document').ready(function () {
     loadGoods();
+
 });
 
 
@@ -11,7 +12,7 @@ function loadGoods() {
             var bands = '';
             var goods = document.getElementById('goods');
             var bandsID = document.getElementById('bands');
-            
+
             for (var key in data['items']) {
                 out += '<a href="#" class="catalog-items-item" data-index="' + data['items'][key]['data-index'] + '" data-cost="' +
                     data['items'][key]['cost'].replace(/\s+/g, '') + '" data-priority="' + data['items'][key]['priority'] + '">';
@@ -39,7 +40,7 @@ function loadGoods() {
                 out += '</div>';
                 out += '</a>';
             }
-            
+
             for (var key in data['bands']) {
                 bands += '<a href="#" class="bands-catalog-item" data-index="' + data['bands'][key]['data-index'] + '" data-cost="' +
                     data['bands'][key]['cost'].replace(/\s+/g, '') + '" data-priority="' + data['bands'][key]['priority'] + '">';
@@ -69,14 +70,14 @@ function loadGoods() {
             }
             goods.innerHTML = out;
             bandsID.innerHTML = bands;
-
+            checkboxes();
 
         },
 
     ).always(function () {
         let list = document.getElementById('goods');
         console.log(list);
-
+        // checkboxFilter()
         list.addEventListener('click', function (e) {
             e.preventDefault();
             let target = e.target;
@@ -88,19 +89,47 @@ function loadGoods() {
 
 };
 
-// $('#techne').on('click', () => {
-//     $('[data-index = "techne"]').toggleClass('hide');
-// });
-
-// $('#rado').on('click', () => {
-//     $('[data-index = "rado"]').toggleClass('hide');
-// });
-
-// $('#blvgardi').on('click', () => {
-//     $('[data-index = "blvgardi"]').toggleClass('hide');
-// });
-
-
+function checkboxes() {
+    var list = document.getElementById('filterBrand');
+    list.addEventListener('change', function () {
+        var arr = document.querySelectorAll('.catalog-items-item');
+        arr = Array.prototype.slice.call(arr);
+        arr.map(function (e) {
+            e.classList.remove('show');
+            e.classList.add('hide');
+        });
+        if (techne.checked) {
+            arr.map(function (elem) {
+                if (elem.dataset.index == 'techne') {
+                    elem.classList.remove('hide');
+                    elem.classList.add('show');
+                }
+            })
+        }
+        if (rado.checked) {
+            arr.map(function (elem) {
+                if (elem.dataset.index == 'rado') {
+                    elem.classList.remove('hide');
+                    elem.classList.add('show');
+                }
+            })
+        }
+        if (blvgardi.checked) {
+            arr.map(function (elem) {
+                if (elem.dataset.index == 'blvgardi') {
+                    elem.classList.remove('hide');
+                    elem.classList.add('show');
+                }
+            })
+        }
+        if (techne.checked == false && rado.checked == false && blvgardi.checked == false) {
+            arr.map(function (e) {
+                e.classList.remove('hide');
+                e.classList.add('show');
+            });
+        }
+    })
+}
 
 (function () {
     document.getElementById('catalog-select').addEventListener("change", function () {
@@ -131,7 +160,8 @@ function loadGoods() {
 
 
 function expensiveSort() {
-    var arr = makeArr();
+    var arr = document.querySelectorAll('.catalog-items-item');
+    arr = Array.prototype.slice.call(arr);
     arr.sort(function (a, b) {
         return +b.dataset.cost - +a.dataset.cost;
     })
@@ -142,10 +172,9 @@ function expensiveSort() {
     document.getElementById('goods').innerHTML = output;
 }
 
-
-
 function cheapSort() {
-    var arr = makeArr();
+    var arr = document.querySelectorAll('.catalog-items-item');
+    arr = Array.prototype.slice.call(arr);
     arr.sort(function (a, b) {
         return +a.dataset.cost - +b.dataset.cost;
     })
@@ -157,7 +186,8 @@ function cheapSort() {
 }
 
 function popularSort() {
-    var arr = makeArr();
+    var arr = document.querySelectorAll('.catalog-items-item');
+    arr = Array.prototype.slice.call(arr);
     arr.sort(function (a, b) {
         return +a.dataset.priority - +b.dataset.priority;
     })
@@ -168,14 +198,14 @@ function popularSort() {
     document.getElementById('goods').innerHTML = output;
 }
 
-function makeArr() {
-    let goods = document.querySelectorAll('.catalog-items-item');
-    let arr = [];
-    for (var i = 0; i < goods.length; i++) {
-        arr.push(goods[i]);
-    }
-    return (arr)
-};
+// function makeArr() {
+//     let goods = document.querySelectorAll('.catalog-items-item');
+//     let arr = [];
+//     for (var i = 0; i < goods.length; i++) {
+//         arr.push(goods[i]);
+//     }
+//     return (arr)
+// };
 
 (function () {
     document.getElementById('filter').addEventListener('click', function () {
@@ -188,15 +218,15 @@ function makeArr() {
     let filter = document.getElementById('filter-block');
     filter.onclick = function (e) {
         let target = e.target;
-        console.log(target);
+
         if (target.classList.contains('catalog-filter__button'))
             toggleFilterBtn(target);
-            toggleSlider();
-            toggleBrand();
+        toggleSlider();
+        toggleBrand();
     }
 })();
 
-function toggleSlider () {
+function toggleSlider() {
     var btn = document.getElementById('filterBtn');
     var slider = document.getElementById('filterCost');
     if (btn.classList.contains('catalog-filter__button_active')) {
@@ -205,7 +235,8 @@ function toggleSlider () {
         slider.classList.add('hide');
     }
 };
-function toggleBrand () {
+
+function toggleBrand() {
     var btn = document.getElementById('brandBtn');
     var slider = document.getElementById('filterBrand');
     if (btn.classList.contains('catalog-filter__button_active')) {
