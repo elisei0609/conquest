@@ -212,6 +212,29 @@ $color: #1B1A17;
       height: fit-content;
       width: 20%;
 
+         &-slider {
+            margin: 5% 0;
+
+            &__amount {
+               display: flex;
+               justify-content: space-around;
+            }
+
+            &__min {
+               width: 40%;
+               border: 1px solid #e5e6e7;
+               padding: 2% 5%;
+
+            }
+
+            &__max {
+               width: 40%;
+               border: 1px solid #e5e6e7;
+               padding: 2% 5%;
+            }
+
+         }
+
       @media screen and (max-width: 768px) {
          width: 90%;
       }
@@ -700,4 +723,25 @@ $color: #1B1A17;
 .hide {
    display: none;
    visibility: hidden;
+}
+
+.ui-slider {
+
+   
+   &-range {
+      background-color: #1B1A17;
+   }
+}
+.ui-widget-header {
+   background-color: #1B1A17; 
+}
+
+#slider-range {
+   max-width: 90%;
+   width: 90%;
+   height: 1px;
+   margin: 0 auto;
+   border: 0;
+   background-color: #D4D4D4;
+   margin-bottom: 5%;
 }
