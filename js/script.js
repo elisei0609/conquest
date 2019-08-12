@@ -1,139 +1,68 @@
-$('document').ready(function () {
-    loadGoods();
+document.addEventListener('DOMContentLoaded', function () {
+    var request = new XMLHttpRequest();
+    request.open('GET', 'goods.json');
+    request.responseType = 'json';
+    request.send();
+    request.onload = function () {
+        var superHeroes = request.response;
+        addingGoods(superHeroes);
+        addingBands(superHeroes);
+    }
 
+    checkboxes();
+    getLowerCost();
+    getHigherCost();
+    likeClicked();
+});
+
+$(function () {
+    $("#slider-range").slider({
+        range: true,
+        min: getLowerCost(),
+        max: 100000,
+        values: [75, 15000],
+        slide: function (event, ui) {
+            $("#amountMin").val(ui.values[0]);
+            $("#amountMax").val(ui.values[1]);
+        }
+    });
+    $("#amountMin").val($("#slider-range").slider("values", 0) + " ₽");
+    $("#amountMax").val($("#slider-range").slider("values", 1) + " ₽");
+
+    $("input#amountMin").change(function () {
+        var value1 = $("input#amountMin").val();
+        var value2 = $("input#amountMax").val();
+        if (parseInt(value1) > parseInt(value2)) {
+            value1 = value2;
+            $("input#amountMin").val(value1);
+        }
+        $('#slider-range').slider("values", 0, value1);
+    });
+    $("input#amountMax").change(function () {
+        var value1 = $("input#amountMin").val();
+        var value2 = $("input#amountMax").val();
+        if (parseInt(value1) > parseInt(value2)) {
+            value2 = value2;
+            $("input#amountMax").val(value2);
+        }
+        $('#slider-range').slider("values", 1, value2);
+    });
+
+    jQuery('#amountMin, #amountMax').keypress(function (event) {
+        var key, keyChar;
+        if (!event) var event = window.event;
+
+        if (event.keyCode) key = event.keyCode;
+        else if (event.which) key = event.which;
+
+        if (key == null || key == 0 || key == 8 || key == 13 || key == 9 || key == 46 || key == 37 || key == 39) return true;
+        keyChar = String.fromCharCode(key);
+
+        if (!/\d/.test(keyChar)) return false;
+    })
 });
 
 
-function loadGoods() {
-    //загружаю товары на страницу
-    $.getJSON('goods.json',
-        function (data) {
-            var out = '';
-            var bands = '';
-            var goods = document.getElementById('goods');
-            var bandsID = document.getElementById('bands');
-
-            for (var key in data['items']) {
-                out += '<a href="#" class="catalog-items-item" data-index="' + data['items'][key]['data-index'] + '" data-cost="' +
-                    data['items'][key]['cost'].replace(/\s+/g, '') + '" data-priority="' + data['items'][key]['priority'] + '">';
-                out += '<div class="catalog-items-container">';
-                out += '<div class="catalog-items__name">';
-                out += '<h3 class="catalog-items__brand">' + data['items'][key]['name'] + '</h3>';
-                out += '<p class="catalog-items__price">' + data['items'][key]['cost'] + ' ₽' + '</p>';
-                out += '</div>';
-                out += '<div class="catalog-items-social">';
-                out += '<button class="catalog-social__svg like">';
-                out += '<svg class="svg-heart" width="21" height="18" viewBox="0 0 21 18">';
-                out += '<use xlink:href="#love-svg">';
-                out += '</use>';
-                out += '</svg>';
-                out += '</button>';
-                out += '<button class="catalog-social__svg elem">'
-                out += '<svg width="18" height="16" viewBox="0 0 18 16">';
-                out += '<use xlink:href="#box-svg">';
-                out += '</use>';
-                out += '</svg>';
-                out += '</button>';
-                out += '</div>';
-                out += '<img src="' + data['items'][key].image + '"  alt="techne" class="catalog-items__img">';
-                out += '</div>';
-                out += '</div>';
-                out += '</a>';
-            }
-
-            for (var key in data['bands']) {
-                bands += '<a href="#" class="bands-catalog-item" data-index="' + data['bands'][key]['data-index'] + '" data-cost="' +
-                    data['bands'][key]['cost'].replace(/\s+/g, '') + '" data-priority="' + data['bands'][key]['priority'] + '">';
-                bands += '<div class="bands-items-container">';
-                bands += '<div class="bands-items__name">';
-                bands += '<h3 class="bands-items__brand">' + data['bands'][key]['name'] + '</h3>';
-                bands += '<p class="bands-items__price">' + data['bands'][key]['cost'] + ' ₽' + '</p>';
-                bands += '</div>';
-                bands += '<div class="bands-items-social">';
-                bands += '<button class="bands-social__svg like">';
-                bands += '<svg width="21" height="18" viewBox="0 0 21 18">';
-                bands += '<use xlink:href="#love-svg">';
-                bands += '</use>';
-                bands += '</svg>';
-                bands += '</button>';
-                bands += '<button class="bands__svg elem">'
-                bands += '<svg width="18" height="16" viewBox="0 0 18 16">';
-                bands += '<use xlink:href="#box-svg">';
-                bands += '</use>';
-                bands += '</svg>';
-                bands += '</button>';
-                bands += '</div>';
-                bands += '<img src="' + data['bands'][key].image + '"  alt="techne" class="bands-items__img">';
-                bands += '</div>';
-                bands += '</div>';
-                bands += '</a>';
-            }
-            goods.innerHTML = out;
-            bandsID.innerHTML = bands;
-            checkboxes();
-
-        },
-
-    ).always(function () {
-        let list = document.getElementById('goods');
-        console.log(list);
-        // checkboxFilter()
-        list.addEventListener('click', function (e) {
-            e.preventDefault();
-            let target = e.target;
-            if (target.classList.contains('svg-heart'))
-                toggleSvg(target)
-        })
-    });
-
-    $(function () {
-        $("#slider-range").slider({
-            range: true,
-            min: 300,
-            max: 700,
-            values: [75, 700],
-            slide: function (event, ui) {
-                $("#amountMin").val(ui.values[0] );
-                $("#amountMax").val(ui.values[1] );
-            }
-        });
-        $("#amountMin").val($("#slider-range").slider("values", 0) + " ₽");
-        $("#amountMax").val($("#slider-range").slider("values", 1) + " ₽");
-
-        $("input#amountMin").change(function () {
-            var value1 = $("input#amountMin").val();
-            var value2 = $("input#amountMax").val();
-            if (parseInt(value1) > parseInt(value2)) {
-                value1 = value2;
-                $("input#amountMin").val(value1);
-            }
-            $('#slider-range').slider("values", 0, value1);
-        });
-        $("input#amountMax").change(function () {
-            var value1 = $("input#amountMin").val();
-            var value2 = $("input#amountMax").val();
-            if (parseInt(value1) > parseInt(value2)) {
-                value2 = value2;
-                $("input#amountMax").val(value2);
-            }
-            $('#slider-range').slider("values", 1, value2);
-        });
-
-        jQuery('#amountMin, #amountMax').keypress(function (event) {
-            var key, keyChar;
-            if (!event) var event = window.event;
-
-            if (event.keyCode) key = event.keyCode;
-            else if (event.which) key = event.which;
-
-            if (key == null || key == 0 || key == 8 || key == 13 || key == 9 || key == 46 || key == 37 || key == 39) return true;
-            keyChar = String.fromCharCode(key);
-
-            if (!/\d/.test(keyChar)) return false;
-        })
-    });
-
-};
 
 function checkboxes() {
     var list = document.getElementById('filterBrand');
@@ -289,4 +218,108 @@ function toggleSvg(svg) {
 
 function toggleFilterBtn(button) {
     button.classList.toggle('catalog-filter__button_active')
+}
+
+function getLowerCost() {
+    var arr = document.querySelectorAll('.catalog-items-item');
+    arr = Array.prototype.slice.call(arr);
+    var prop;
+    arr.map(function (a) {
+        var lowerPrice = +a.dataset.cost;
+        if (+a.dataset.cost < lowerPrice) {
+            lowerPrice = +a.dataset.cost;
+            prop = lowerPrice;
+            console.log(lowerPrice)
+        }
+    })
+    return prop
+}
+
+function getHigherCost() {
+    var arr = document.querySelectorAll('.catalog-items-item');
+    arr = Array.prototype.slice.call(arr);
+    var highPrice = -Infinity;
+    arr.map(function (a) {
+        if (+a.dataset.cost > highPrice) {
+            return highPrice = +a.dataset.cost;
+        }
+    })
+    console.log(highPrice);
+    return highPrice;
+};
+
+function likeClicked() {
+    let list = document.getElementById('goods');
+    list.addEventListener('click', function (e) {
+        e.preventDefault();
+        let target = e.target;
+        if (target.classList.contains('svg-heart'))
+            toggleSvg(target)
+    })
+};
+
+function addingGoods(data) {
+    var goods = document.getElementById('goods');
+    var out = '';
+    for (var key in data['items']) {
+        out += '<a href="#" class="catalog-items-item" data-index="' + data['items'][key]['data-index'] + '" data-cost="' +
+            data['items'][key]['cost'].replace(/\s+/g, '') + '" data-priority="' + data['items'][key]['priority'] + '">';
+        out += '<div class="catalog-items-container">';
+        out += '<div class="catalog-items__name">';
+        out += '<h3 class="catalog-items__brand">' + data['items'][key]['name'] + '</h3>';
+        out += '<p class="catalog-items__price">' + data['items'][key]['cost'] + ' ₽' + '</p>';
+        out += '</div>';
+        out += '<div class="catalog-items-social">';
+        out += '<button class="catalog-social__svg like">';
+        out += '<svg class="svg-heart" width="21" height="18" viewBox="0 0 21 18">';
+        out += '<use xlink:href="#love-svg">';
+        out += '</use>';
+        out += '</svg>';
+        out += '</button>';
+        out += '<button class="catalog-social__svg elem">'
+        out += '<svg width="18" height="16" viewBox="0 0 18 16">';
+        out += '<use xlink:href="#box-svg">';
+        out += '</use>';
+        out += '</svg>';
+        out += '</button>';
+        out += '</div>';
+        out += '<img src="' + data['items'][key].image + '"  alt="techne" class="catalog-items__img">';
+        out += '</div>';
+        out += '</div>';
+        out += '</a>';
+    }
+    goods.innerHTML = out;
+};
+
+function addingBands(data) {
+    var bandsID = document.getElementById('bands');
+    var bands = '';
+    for (var key in data['bands']) {
+        bands += '<a href="#" class="bands-catalog-item" data-index="' + data['bands'][key]['data-index'] + '" data-cost="' +
+            data['bands'][key]['cost'].replace(/\s+/g, '') + '" data-priority="' + data['bands'][key]['priority'] + '">';
+        bands += '<div class="bands-items-container">';
+        bands += '<div class="bands-items__name">';
+        bands += '<h3 class="bands-items__brand">' + data['bands'][key]['name'] + '</h3>';
+        bands += '<p class="bands-items__price">' + data['bands'][key]['cost'] + ' ₽' + '</p>';
+        bands += '</div>';
+        bands += '<div class="bands-items-social">';
+        bands += '<button class="bands-social__svg like">';
+        bands += '<svg width="21" height="18" viewBox="0 0 21 18">';
+        bands += '<use xlink:href="#love-svg">';
+        bands += '</use>';
+        bands += '</svg>';
+        bands += '</button>';
+        bands += '<button class="bands__svg elem">'
+        bands += '<svg width="18" height="16" viewBox="0 0 18 16">';
+        bands += '<use xlink:href="#box-svg">';
+        bands += '</use>';
+        bands += '</svg>';
+        bands += '</button>';
+        bands += '</div>';
+        bands += '<img src="' + data['bands'][key].image + '"  alt="techne" class="bands-items__img">';
+        bands += '</div>';
+        bands += '</div>';
+        bands += '</a>';
+    }
+    bandsID.innerHTML = bands;
 }
