@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', function () {
         var superHeroes = request.response;
         addingGoods(superHeroes);
         addingBands(superHeroes);
+        sortingObj(superHeroes, 15800, 75000);
+        // console.log(superHeroes)
     }
 
     checkboxes();
@@ -323,3 +325,54 @@ function addingBands(data) {
     }
     bandsID.innerHTML = bands;
 }
+
+function sortingObj(item, valueMin, valueMax) {
+    var sortObj = Object.assign({}, item);
+    var arr = [];
+    var soredObj;
+
+    for (var key in sortObj['items']) {
+        arr.push({
+            items: sortObj['items'][key]
+        });
+    }
+
+    sortedObj = arr.filter(function (a) {
+        return +a.items.cost.replace(/\s+/g, '') >= valueMin && +a.items.cost.replace(/\s+/g, '') <= valueMax;
+    })
+    addingSortedGoods(sortedObj)
+}
+
+function addingSortedGoods(data) {
+    var goods = document.getElementById('goods');
+    var out = '';
+    for (var i = 0; i < data.length; i++) {
+
+        out += '<a href="#" class="catalog-items-item" data-index="' + data[i]['items']['data-index'] + '" data-cost="' +
+            data[i]['items']['cost'].replace(/\s+/g, '') + '" data-priority="' + data[i]['items']['priority'] + '">';
+        out += '<div class="catalog-items-container">';
+        out += '<div class="catalog-items__name">';
+        out += '<h3 class="catalog-items__brand">' + data[i]['items']['name'] + '</h3>';
+        out += '<p class="catalog-items__price">' + data[i]['items']['cost'] + ' ₽' + '</p>';
+        out += '</div>';
+        out += '<div class="catalog-items-social">';
+        out += '<button class="catalog-social__svg like">';
+        out += '<svg class="svg-heart" width="21" height="18" viewBox="0 0 21 18">';
+        out += '<use xlink:href="#love-svg">';
+        out += '</use>';
+        out += '</svg>';
+        out += '</button>';
+        out += '<button class="catalog-social__svg elem">'
+        out += '<svg width="18" height="16" viewBox="0 0 18 16">';
+        out += '<use xlink:href="#box-svg">';
+        out += '</use>';
+        out += '</svg>';
+        out += '</button>';
+        out += '</div>';
+        out += '<img src="' + data[i]['items'].image + '"  alt="techne" class="catalog-items__img">';
+        out += '</div>';
+        out += '</div>';
+        out += '</a>';
+    }
+    goods.innerHTML = out;
+};

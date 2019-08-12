@@ -89,69 +89,69 @@
             </div>
             <div class="catalog-container">
                <div class="catalog-filter catalog-filter_disable" id="filter-block">
-                  <div class="catalog-filter-item">
-
-                     <h4 class="catalog-filter__title">Cтоимость
-                        <button class="catalog-filter__button catalog-filter__button_active" id="filterBtn"></button>
-                     </h4>
-
-
-                     <div class="catalog-filter-slider" id="filterCost">
-                        <div  id="slider-range">
-                           <!-- <span id="left-button" class="filter-slider__dot"></span>
-                           <span id="right-button" class="filter-slider__dot"></span> -->
-                        </div>
-
-                        <div class="catalog-filter-slider__amount">
-                           <input type="text" class="catalog-filter-slider__min" id="amountMin">
-                           <input type="text" class="catalog-filter-slider__max" id="amountMax">
-                        </div>
-                     </div>
-                  </div>
-                  <div class="catalog-filter-item">
-                     <h4 class="catalog-filter__title">Бренд
-                     </h4>
-                     <button class="catalog-filter__button catalog-filter__button_active" id="brandBtn"></button>
-                     <div class="catalog-filter-list" id="filterBrand">
-                        <div class="catalog-filter-label">
-                           <input class="catalog-filter__checkbox" type="checkbox" name="techne" id="techne">
-                           <label for="techne">Techne</label>
-                        </div>
-                        <div class="catalog-filter-label">
-                           <input class="catalog-filter__checkbox" type="checkbox" name="rado" id="rado">
-                           <label for="rado">Rado</label>
-                        </div>
-                        <div class="catalog-filter-label">
-                           <input class="catalog-filter__checkbox" type="checkbox" name="blvgardi" id="blvgardi">
-                           <label for="blvgardi">Blvgari</label>
-                        </div>
-                        <div class="catalog-filter-label disabled">
-                           <input type="checkbox" name="tissot" id="tissot" disabled>
-                           <label for="tissot">Tissot</label>
-                        </div>
-                        <div class="catalog-filter-label disabled">
-                           <input type="checkbox" name="omega" id="omega" disabled>
-                           <label for="omega">Omega</label>
-                        </div>
-                        <div class="catalog-filter-label disabled">
-                           <input type="checkbox" name="montblanc" id="montblanc" disabled>
-                           <label for="montblanc">Montblanc</label>
+                  <form id="form" action="">
+                     <div class="catalog-filter-item">
+   
+                        <h4 class="catalog-filter__title">Cтоимость
+                           <button class="catalog-filter__button catalog-filter__button_active" id="filterBtn"></button>
+                        </h4>
+   
+   
+                        <div class="catalog-filter-slider" id="filterCost">
+                           <div  id="slider-range">
+                           </div>
+   
+                           <div class="catalog-filter-slider__amount">
+                              <input type="text" class="catalog-filter-slider__min" id="amountMin">
+                              <input type="text" class="catalog-filter-slider__max" id="amountMax">
+                           </div>
                         </div>
                      </div>
-                  </div>
-                  <div class="catalog-filter-item">
-                     <h4 class="catalog-filter__title">Механизм</h4>
-                     <button class="catalog-filter__button"></button>
-                  </div>
-                  <div class="catalog-filter-item">
-                     <h4 class="catalog-filter__title">Материал</h4>
-                     <button class="catalog-filter__button"></button>
-                  </div>
-                  <div class="catalog-filter-item">
-                     <h4 class="catalog-filter__title">Цвет</h4>
-                     <button class="catalog-filter__button"></button>
-                  </div>
-                  <button class="catalog-filter__reset btn" id="reset">Сбросить фильтр</button>
+                     <div class="catalog-filter-item">
+                        <h4 class="catalog-filter__title">Бренд
+                        </h4>
+                        <button class="catalog-filter__button catalog-filter__button_active" id="brandBtn"></button>
+                        <div class="catalog-filter-list" id="filterBrand">
+                           <div class="catalog-filter-label">
+                              <input class="catalog-filter__checkbox" type="checkbox" name="techne" id="techne">
+                              <label for="techne">Techne</label>
+                           </div>
+                           <div class="catalog-filter-label">
+                              <input class="catalog-filter__checkbox" type="checkbox" name="rado" id="rado">
+                              <label for="rado">Rado</label>
+                           </div>
+                           <div class="catalog-filter-label">
+                              <input class="catalog-filter__checkbox" type="checkbox" name="blvgardi" id="blvgardi">
+                              <label for="blvgardi">Blvgari</label>
+                           </div>
+                           <div class="catalog-filter-label disabled">
+                              <input type="checkbox" name="tissot" id="tissot" disabled>
+                              <label for="tissot">Tissot</label>
+                           </div>
+                           <div class="catalog-filter-label disabled">
+                              <input type="checkbox" name="omega" id="omega" disabled>
+                              <label for="omega">Omega</label>
+                           </div>
+                           <div class="catalog-filter-label disabled">
+                              <input type="checkbox" name="montblanc" id="montblanc" disabled>
+                              <label for="montblanc">Montblanc</label>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="catalog-filter-item">
+                        <h4 class="catalog-filter__title">Механизм</h4>
+                        <button class="catalog-filter__button"></button>
+                     </div>
+                     <div class="catalog-filter-item">
+                        <h4 class="catalog-filter__title">Материал</h4>
+                        <button class="catalog-filter__button"></button>
+                     </div>
+                     <div class="catalog-filter-item">
+                        <h4 class="catalog-filter__title">Цвет</h4>
+                        <button class="catalog-filter__button"></button>
+                     </div>
+                     <button type="submit" class="catalog-filter__reset btn" id="reset">Сбросить фильтр</button>
+                  </form>
                </div>
                <div class="catalog-items">
                   <div class="catalog-items__arrow">
