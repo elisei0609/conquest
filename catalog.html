@@ -9,10 +9,10 @@
    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Prata|Roboto:400,500&display=swap"
       rel="stylesheet">
    <link rel="stylesheet" href="style/normalize.css">
-   <link rel="stylesheet" href="style/catalog.css">
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
    <link rel="stylesheet" href="style/jquery-ui.css">
    <link rel="stylesheet" href="style/style.css">
+   <link rel="stylesheet" href="style/catalog.css">
 
 </head>
 
@@ -90,7 +90,7 @@
             <div class="catalog-container">
                <div class="catalog-filter catalog-filter_disable" id="filter-block">
                   <form id="form" action="">
-                     <div class="catalog-filter-item">
+                     <div class="catalog-filter-item" id="slider-filter">
    
                         <h4 class="catalog-filter__title">Cтоимость
                            <button class="catalog-filter__button catalog-filter__button_active" id="filterBtn"></button>
@@ -150,7 +150,7 @@
                         <h4 class="catalog-filter__title">Цвет</h4>
                         <button class="catalog-filter__button"></button>
                      </div>
-                     <button type="submit" class="catalog-filter__reset btn" id="reset">Сбросить фильтр</button>
+                     <button type="submit" class="catalog-filter__reset btn" id="reset">Применить</button>
                   </form>
                </div>
                <div class="catalog-items">

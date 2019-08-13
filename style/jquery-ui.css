@@ -731,7 +731,7 @@ button.ui-button::-moz-focus-inner {
    border: 1px solid #000;
    border-radius: 50%;
    background-color: #fff;
-	cursor: default;
+	cursor: pointer;
 	-ms-touch-action: none;
 	touch-action: none;
 }

@@ -7,29 +7,35 @@ document.addEventListener('DOMContentLoaded', function () {
         var superHeroes = request.response;
         addingGoods(superHeroes);
         addingBands(superHeroes);
-        sortingObj(superHeroes, 15800, 75000);
-        // console.log(superHeroes)
     }
-
     checkboxes();
     getLowerCost();
     getHigherCost();
     likeClicked();
+    formSubmit();
+    // (function () {
+    //     var min = document.getElementById('amountMin');
+    //     min.addEventListener('change', function(e) {
+    //         e.preventDefault;  
+    //         console.log(min.value)
+    //     })
+
+    // })();
 });
 
 $(function () {
     $("#slider-range").slider({
         range: true,
-        min: getLowerCost(),
-        max: 100000,
-        values: [75, 15000],
+        min: 12700,
+        max: 72700,
+        values: [75, 100000],
         slide: function (event, ui) {
             $("#amountMin").val(ui.values[0]);
             $("#amountMax").val(ui.values[1]);
         }
     });
-    $("#amountMin").val($("#slider-range").slider("values", 0) + " ₽");
-    $("#amountMax").val($("#slider-range").slider("values", 1) + " ₽");
+    $("#amountMin").val($("#slider-range").slider("values", 0));
+    $("#amountMax").val($("#slider-range").slider("values", 1));
 
     $("input#amountMin").change(function () {
         var value1 = $("input#amountMin").val();
@@ -63,6 +69,26 @@ $(function () {
         if (!/\d/.test(keyChar)) return false;
     })
 });
+
+
+
+function formSubmit() {
+    var form = document.getElementById('form');
+    // form.submit();
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var min = document.getElementById('amountMin').value;
+        var max = document.getElementById('amountMax').value;
+        var request = new XMLHttpRequest();
+        request.open('GET', 'goods.json');
+        request.responseType = 'json';
+        request.send();
+        request.onload = function () {
+            var superHeroes = request.response;
+            sortingObj(superHeroes, +min, +max)
+        }
+    })
+};
 
 
 
@@ -329,7 +355,7 @@ function addingBands(data) {
 function sortingObj(item, valueMin, valueMax) {
     var sortObj = Object.assign({}, item);
     var arr = [];
-    var soredObj;
+    var sortedObj;
 
     for (var key in sortObj['items']) {
         arr.push({
