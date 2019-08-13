@@ -31,16 +31,17 @@ $color: #1B1A17;
       align-items: center;
 
       &-container {
-         max-width: 100px;
          display: flex;
-         width: 100%;
          justify-content: space-between;
+         max-width: 60px;
+         width: 15%;
       }
    }
 
    .nav {
       max-width: 430px;
       width: 100%;
+
 
       &-list {
          display: flex;
@@ -67,8 +68,13 @@ $color: #1B1A17;
    font-size: 14px;
    color: #B3B3B3;
 
+   @media screen and (max-width: 420px) {
+      padding-top: 15%;
+   }
+
    &-list {
       display: flex;
+      flex-wrap: wrap;
 
       &__item {
          position: relative;
@@ -212,28 +218,28 @@ $color: #1B1A17;
       height: fit-content;
       width: 20%;
 
-         &-slider {
-            margin: 5% 0;
+      &-slider {
+         margin: 5% 0;
 
-            &__amount {
-               display: flex;
-               justify-content: space-around;
-            }
+         &__amount {
+            display: flex;
+            justify-content: space-around;
+         }
 
-            &__min {
-               width: 40%;
-               border: 1px solid #e5e6e7;
-               padding: 2% 5%;
-
-            }
-
-            &__max {
-               width: 40%;
-               border: 1px solid #e5e6e7;
-               padding: 2% 5%;
-            }
+         &__min {
+            width: 40%;
+            border: 1px solid #e5e6e7;
+            padding: 2% 5%;
 
          }
+
+         &__max {
+            width: 40%;
+            border: 1px solid #e5e6e7;
+            padding: 2% 5%;
+         }
+
+      }
 
       @media screen and (max-width: 768px) {
          width: 90%;
@@ -325,7 +331,7 @@ $color: #1B1A17;
          border: 2px solid #E7E0CF;
          width: 100%;
          height: 60px;
-         
+
 
       }
 
@@ -339,7 +345,7 @@ $color: #1B1A17;
          right: 0;
          top: 0.4%;
 
-         
+
          &:after {
             display: none;
          }
@@ -579,6 +585,7 @@ $color: #1B1A17;
             margin-bottom: 5%;
             max-width: none;
             width: 100%;
+
          }
       }
 
@@ -702,14 +709,14 @@ $color: #1B1A17;
    fill: #1B1A17;
    stroke: #1B1A17;
 
-      &:hover {
-         stroke: red;
-      }
+   &:hover {
+      stroke: red;
+   }
 }
 
 .redFill {
 
-    stroke: red;
+   stroke: red;
 }
 
 .show {
@@ -728,13 +735,14 @@ $color: #1B1A17;
 
 .ui-slider {
 
-   
+
    &-range {
       background-color: #1B1A17;
    }
 }
+
 .ui-widget-header {
-   background-color: #1B1A17; 
+   background-color: #1B1A17;
 }
 
 #slider-range {
@@ -745,4 +753,218 @@ $color: #1B1A17;
    border: 0;
    background-color: #D4D4D4;
    margin-bottom: 5%;
+}
+
+.menu-wrap {
+   position: fixed;
+   top: 0;
+   left: 2%;
+   z-index: 1;
+   display: none;
+}
+
+.menu-wrap .toggler {
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 2;
+   cursor: pointer;
+   width: 50px;
+   height: 50px;
+   opacity: 0;
+}
+
+.menu-wrap .hamburger {
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 1;
+   width: 50px;
+   height: 50px;
+   padding: 1rem;
+   background: inherit;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+/* Hamburger Line */
+.menu-wrap .hamburger>div {
+   position: relative;
+   flex: none;
+   width: 100%;
+   height: 2px;
+   background: #000;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: all 0.4s ease;
+}
+
+/* Hamburger Lines - Top & Bottom */
+.menu-wrap .hamburger>div::before,
+.menu-wrap .hamburger>div::after {
+   content: '';
+   position: absolute;
+   z-index: 1;
+   top: -10px;
+   width: 100%;
+   height: 2px;
+   background: inherit;
+}
+
+/* Moves Line Down */
+.menu-wrap .hamburger>div::after {
+   top: 10px;
+}
+
+/* Toggler Animation */
+.menu-wrap .toggler:checked+.hamburger>div {
+   transform: rotate(135deg);
+}
+
+/* Turns Lines Into X */
+.menu-wrap .toggler:checked+.hamburger>div:before,
+.menu-wrap .toggler:checked+.hamburger>div:after {
+   top: 0;
+   transform: rotate(90deg);
+}
+
+/* Rotate On Hover When Checked */
+.menu-wrap .toggler:checked:hover+.hamburger>div {
+   transform: rotate(225deg);
+}
+
+/* Show Menu */
+.menu-wrap .toggler:checked~.menu {
+   visibility: visible;
+}
+
+.menu-wrap .toggler:checked~.menu>div {
+   transform: scale(1);
+   transition-duration: 0.75s;
+}
+
+.menu-wrap .toggler:checked~.menu>div>div {
+   opacity: 1;
+   transition: opacity 0.4s ease 0.4s;
+}
+
+.menu-wrap .menu {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   visibility: hidden;
+   overflow: hidden;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.menu-wrap .menu>div {
+   background: #182733d9;
+   width: 200vw;
+   height: 200vh;
+   display: flex;
+   flex: none;
+   align-items: center;
+   justify-content: center;
+   transform: scale(0);
+   transition: all 0.4s ease;
+}
+
+.menu-wrap .menu>div>div {
+   text-align: center;
+   max-width: 90vw;
+   max-height: 100vh;
+   opacity: 0;
+   transition: opacity 0.4s ease;
+}
+
+.menu-wrap .menu>div>div>ul>li {
+   list-style: none;
+   color: #fff;
+   font-size: 1.5rem;
+   padding: 1rem;
+}
+
+.menu-wrap .menu>div>div>ul>li>a {
+   color: inherit;
+   text-decoration: none;
+   transition: color 0.4s ease;
+}
+
+@media screen and (max-width: 768px) {
+
+   .header {
+      position: fixed;
+      z-index: 20;
+      height: 41px;
+      padding: 1% 0;
+      background-color: #fff;
+
+      &-buttons__logo {
+         margin: 0 auto;
+      }
+
+
+
+      &-menu {
+         height: 100%;
+      }
+   }
+
+   .menu-wrap {
+      display: block;
+
+      .toggler {
+         height: 41px;
+      }
+
+      .hamburger {
+         height: 41px;
+      }
+
+   }
+
+   .nav {
+      display: none;
+      visibility: hidden;
+   }
+
+   .pages {
+      padding-top: 5%;
+      margin-bottom: 10%;
+   }
+
+   .catalog-filter-title {
+      margin-bottom: 7%;
+   }
+
+   .catalog-filters {
+     flex-direction: column;
+   }
+
+   .catalog-filters_-filter {
+      margin-bottom: 5%;
+   }
+}
+
+@media screen and (max-width: 420px) {
+
+   .pages {
+      padding-top: 15%;
+   }
+
+
+   .catalog-filters__filter {
+      margin-bottom: 10%;
+   }
+
+   .catalog-select-container {
+      flex-wrap: wrap;
+      justify-content: center;
+   }
 }

@@ -22,10 +22,26 @@
 
       <div class="container">
          <div class="header-menu">
-            <div class="header-burger">
-               <span></span>
-            </div>
+
             <div class="header-buttons">
+               <div class="menu-wrap">
+                  <input type="checkbox" class="toggler">
+                  <div class="hamburger">
+                     <div></div>
+                  </div>
+                  <div class="menu">
+                     <div>
+                        <div>
+                           <ul>
+                              <li><a href="#">Каталог</a></li>
+                              <li><a href="#">Акции</a></li>
+                              <li><a href="#">Доставка</a></li>
+                              <li><a href="#">Контакты</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
                <img src="img/logo.png" alt="conquest" class="header-buttons__logo">
                <nav class="nav">
                   <ul class="nav-list">
@@ -36,11 +52,6 @@
                   </ul>
                </nav>
                <div class="header-buttons-container">
-                  <a class="" href="#">
-                     <svg width="16" height="16" viewBox="0 0 16 16">
-                        <use xlink:href='#search-svg'></use>
-                     </svg>
-                  </a>
                   <a href="#">
                      <svg width="21" height="18" viewBox="0 0 21 18" class="like">
                         <use xlink:href="#love-svg"></use>
@@ -53,14 +64,6 @@
                   </a>
                </div>
             </div>
-         </div>
-         <div class="menu-mobile">
-            <ul class="menu-mobile-list">
-               <li class="menu-mobile__item"><a href="#"></a>Каталог</li>
-               <li class="menu-mobile__item"><a href="#"></a>Акции</li>
-               <li class="menu-mobile__item"><a href="#"></a>Доставка</li>
-               <li class="menu-mobile__item"><a href="#"></a>Контакты</li>
-            </ul>
          </div>
       </div>
    </header>
@@ -91,16 +94,16 @@
                <div class="catalog-filter catalog-filter_disable" id="filter-block">
                   <form id="form" action="">
                      <div class="catalog-filter-item" id="slider-filter">
-   
+
                         <h4 class="catalog-filter__title">Cтоимость
                            <button class="catalog-filter__button catalog-filter__button_active" id="filterBtn"></button>
                         </h4>
-   
-   
+
+
                         <div class="catalog-filter-slider" id="filterCost">
-                           <div  id="slider-range">
+                           <div id="slider-range">
                            </div>
-   
+
                            <div class="catalog-filter-slider__amount">
                               <input type="text" class="catalog-filter-slider__min" id="amountMin">
                               <input type="text" class="catalog-filter-slider__max" id="amountMax">
@@ -268,7 +271,8 @@
       </symbol>
    </svg>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js">
+   </script>
    <script type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
    <script src="js/script.js"></script>
