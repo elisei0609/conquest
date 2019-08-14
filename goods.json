@@ -9,21 +9,21 @@
       },
       "techne2": {
          "name": "Techne",
-         "cost": "12 700",
+         "cost": "10 700",
          "image": "img/watch2.png",
          "data-index": "techne",
          "priority": "4"
       },
       "techne3": {
          "name": "Techne",
-         "cost": "15 700",
+         "cost": "7 200",
          "image": "img/watch3.png",
          "data-index": "techne",
          "priority": "5"
       },
       "techne4": {
          "name": "Techne",
-         "cost": "15 700",
+         "cost": "8 700",
          "image": "img/watch4.png",
          "data-index": "techne",
          "priority": "2"
@@ -51,7 +51,7 @@
       },
       "rado1": {
          "name": "Rado",
-         "cost": "14 700",
+         "cost": "32 700",
          "image": "img/watch8.png",
          "data-index": "rado",
          "priority": "1"
@@ -65,14 +65,14 @@
       },
       "techne8": {
          "name": "Techne",
-         "cost": "22 700",
+         "cost": "59 700",
          "image": "img/watch10.png",
          "data-index": "techne",
          "priority": "12"
       },
       "rado2": {
          "name": "Rado",
-         "cost": "22 000",
+         "cost": "43 000",
          "image": "img/watch11.png",
          "data-index": "rado",
          "priority": "3"

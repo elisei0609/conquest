@@ -12,21 +12,66 @@ document.addEventListener('DOMContentLoaded', function () {
     getLowerCost();
     getHigherCost();
     likeClicked();
-    formSubmit();
-    // (function () {
-    //     var min = document.getElementById('amountMin');
-    //     min.addEventListener('change', function(e) {
-    //         e.preventDefault;  
-    //         console.log(min.value)
-    //     })
 
-    // })();
+    (function () {
+        var min = document.getElementById('slider-filter');
+        min.addEventListener('mouseup', function(e) {
+            console.log('min change');
+            var max = document.getElementById('amountMax').value;
+            var min = document.getElementById('amountMin').value;
+            var request = new XMLHttpRequest();
+            request.open('GET', 'goods.json');
+            request.responseType = 'json';
+            request.send();
+            request.onload = function () {
+            var superHeroes = request.response;
+            sortingObj(superHeroes, +min, +max)
+    }
+        })
+
+    })();
+
+    (function () {
+        var min = document.getElementById('amountMin');
+        min.addEventListener('change', function(e) {
+            console.log('min change');
+            var max = document.getElementById('amountMax').value;
+            var min = document.getElementById('amountMin').value;
+            var request = new XMLHttpRequest();
+            request.open('GET', 'goods.json');
+            request.responseType = 'json';
+            request.send();
+            request.onload = function () {
+            var superHeroes = request.response;
+            sortingObj(superHeroes, +min, +max)
+    }
+        })
+
+    })();
+
+    (function () {
+        var max = document.getElementById('amountMax');
+        max.addEventListener('change', function(e) {
+            console.log('min change');
+            var min = document.getElementById('amountMin').value;
+            var max = document.getElementById('amountMax').value;
+            var request = new XMLHttpRequest();
+            request.open('GET', 'goods.json');
+            request.responseType = 'json';
+            request.send();
+            request.onload = function () {
+            var superHeroes = request.response;
+            sortingObj(superHeroes, +min, +max)
+    }
+        })
+
+    })();
 });
 
 $(function () {
     $("#slider-range").slider({
         range: true,
-        min: 12700,
+        min: 7200,
         max: 72700,
         values: [75, 100000],
         slide: function (event, ui) {
@@ -69,28 +114,6 @@ $(function () {
         if (!/\d/.test(keyChar)) return false;
     })
 });
-
-
-
-function formSubmit() {
-    var form = document.getElementById('form');
-    // form.submit();
-    form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        var min = document.getElementById('amountMin').value;
-        var max = document.getElementById('amountMax').value;
-        var request = new XMLHttpRequest();
-        request.open('GET', 'goods.json');
-        request.responseType = 'json';
-        request.send();
-        request.onload = function () {
-            var superHeroes = request.response;
-            sortingObj(superHeroes, +min, +max)
-        }
-    })
-};
-
-
 
 function checkboxes() {
     var list = document.getElementById('filterBrand');
