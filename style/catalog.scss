@@ -257,6 +257,16 @@ $color: #1B1A17;
          right: 0;
          top: 0.4%;
 
+         &:before {
+            content: '';
+            width: 15px;
+            height: 10px;
+            background-color: #0000;
+            position: absolute;
+            top: -5px;
+            left: -2px;
+         }
+
          &:after {
             content: '';
             display: block;
@@ -398,7 +408,7 @@ $color: #1B1A17;
          display: block;
          width: auto;
          max-height: 265px;
-         height: 100%;
+         height: 220px;
          object-fit: cover;
       }
 
