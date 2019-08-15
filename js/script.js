@@ -287,7 +287,6 @@ function getLowerCost() {
         if (+a.dataset.cost < lowerPrice) {
             lowerPrice = +a.dataset.cost;
             prop = lowerPrice;
-            console.log(lowerPrice)
         }
     })
     return prop
@@ -325,7 +324,6 @@ function boxClicked() {
         if (target.classList.contains('basket-svg')) {
             id = target.closest('.catalog-items-item').dataset.priority;
             localStorage.setItem(id, id)
-            console.log(localStorage)
         }
     })
 }
@@ -447,3 +445,5 @@ boxClicked();
         }
         goods.innerHTML = out;
     };
+
+    
