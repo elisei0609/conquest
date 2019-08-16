@@ -6,6 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>Каталог</title>
+   <link rel="shortcut icon" href="favicon.ico">
    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Prata|Roboto:400,500&display=swap"
       rel="stylesheet">
    <link rel="stylesheet" href="style/normalize.css">
@@ -13,16 +14,12 @@
    <link rel="stylesheet" href="style/jquery-ui.css">
    <link rel="stylesheet" href="style/style.css">
    <link rel="stylesheet" href="style/catalog.css">
-
 </head>
 
 <body>
-
    <header class="header">
-
       <div class="container">
          <div class="header-menu">
-
             <div class="header-buttons">
                <div class="menu-wrap">
                   <input type="checkbox" class="toggler">
@@ -43,7 +40,7 @@
                   </div>
                </div>
                <a href="index.html" class="header__logo"><img src="img/logo.png" alt="conquest"
-                  class="header-buttons__logo"></a>
+                     class="header-buttons__logo"></a>
                <nav class="nav">
                   <ul class="nav-list">
                      <li class="nav-list__item nav-list__item_active"><a href="#">Каталог</a></li>
@@ -95,12 +92,9 @@
                <div class="catalog-filter catalog-filter_disable" id="filter-block">
                   <form id="form" action="">
                      <div class="catalog-filter-item" id="slider-filter">
-
                         <h4 class="catalog-filter__title">Cтоимость
                            <button class="catalog-filter__button catalog-filter__button_active" id="filterBtn"></button>
                         </h4>
-
-
                         <div class="catalog-filter-slider" id="filterCost">
                            <div id="slider-range">
                            </div>
@@ -161,7 +155,6 @@
                   <div class="catalog-items__arrow">
                      <p class="catalog-items__arrow-filter">Сортировать по:</p>
                      <select name="catalog-select" id="catalog-select" class="catalog-filters__select">
-
                         <option value="popular" class="catalog-select__option" id="popular">популярности</option>
                         <option value="max" class="catalog-select__option" id="expensive">от дорогих</option>
                         <option value="min" class="catalog-select__option" id="cheap">от дешевых</option>
@@ -200,6 +193,8 @@
       </section>
 
       <section class="bands">
+         <button id="arrowLeft"><i class="fas fa fa-chevron-left"></i></button>
+         <button id="arrowRight"><i class="fas fa fa-chevron-right"></i></button>
          <div class="container">
             <div class="bands-introduction">
                <h2 class="bands__title">Ремешки</h2>
@@ -274,6 +269,7 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js">
    </script>
+   <script src="js/slick.min.js"></script>
    <script type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
    <script src="js/script.js"></script>

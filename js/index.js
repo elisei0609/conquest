@@ -7,9 +7,7 @@
        slidesToShow: 1,
        slidesToScroll: 1,
        prevArrow: $('#arrow-left'),
-       nextArrow: $('#arrow-right'),
-       
-      //  adaptiveHeight: true
+       nextArrow: $('#arrow-right')
      });
       
    })

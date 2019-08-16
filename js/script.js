@@ -7,12 +7,45 @@ document.addEventListener('DOMContentLoaded', function () {
         var superHeroes = request.response;
         addingGoods(superHeroes);
         addingBands(superHeroes);
+        (function ($) {
+            'use strict';
+    
+            $('#bands').slick({
+                dots: false,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                // adaptiveHeight: true,
+                prevArrow: $('#arrowLeft'),
+                nextArrow: $('#arrowRight'),
+                responsive: [
+                    {
+                      breakpoint: 900,
+                      settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                      }
+                    },
+                    {
+                        breakpoint: 500,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }]
+            });
+    
+        })
+        (jQuery);
     }
     checkboxes();
     getLowerCost();
     getHigherCost();
     likeClicked();
-    
+
+  
+
 
     (function () {
         var min = document.getElementById('slider-filter');
@@ -444,25 +477,3 @@ function addingSortedGoods(data) {
     }
     goods.innerHTML = out;
 };
-
-$('.quality-images').slick({
-    dots: true,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 1,
-    adaptiveHeight: true
-  });
-
-  (function ($) {
-    'use strict';
-    
-    $('.quality-images').slick({
-        dots: true,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 1,
-        adaptiveHeight: true
-      });
-       
-    })
- (jQuery);
