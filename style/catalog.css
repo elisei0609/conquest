@@ -132,8 +132,21 @@
             justify-content: space-evenly;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     border-bottom: 1px solid #eaeaea;
     padding-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .catalog-filters {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -516,6 +529,9 @@
     font-size: 18px;
     margin-left: 5px;
   }
+  .header__logo {
+    margin: 0 auto;
+  }
 }
 
 .subscription {
@@ -811,5 +827,9 @@
   border: 0;
   background-color: #D4D4D4;
   margin-bottom: 5%;
+}
+
+.catalog-filters__filter {
+  margin-bottom: 0;
 }
 /*# sourceMappingURL=catalog.css.map */

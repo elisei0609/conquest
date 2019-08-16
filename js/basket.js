@@ -27,9 +27,9 @@ document.addEventListener('DOMContentLoaded', function () {
                deleteItem(target.closest('.checkout-cart__item'))
                fullPrice();
             }
-            
-            
-            
+
+
+
          })
          // fullPrice();
       })();
@@ -51,7 +51,11 @@ function plusAmount(item) {
       var inner = item.querySelector(".checkout-cart__input").value++;
       item.querySelector('#buttonLeft').classList.remove('disabled');
    }
-   itemPrice(item, childElement)
+   if (childElement.value == 10) {
+      item.querySelector('#buttonRight').classList.add('disabled');
+   }
+
+
 }
 
 function minusAmount(item) {
@@ -63,6 +67,10 @@ function minusAmount(item) {
    if (childElement.value == 1) {
       item.querySelector('#buttonLeft').classList.add('disabled');
    }
+   if (childElement.value < 10) {
+      item.querySelector('#buttonRight').classList.remove('disabled');
+   }
+
    itemPrice(item, childElement)
 
 }
