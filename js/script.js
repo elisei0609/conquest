@@ -7,9 +7,30 @@ document.addEventListener('DOMContentLoaded', function () {
         var superHeroes = request.response;
         addingGoods(superHeroes);
         addingBands(superHeroes);
+        var b = $('.subscription-form__error');
+        var c = $('.subscription-form__succses');
+        c.css('display', 'none');
+        b.css('display', 'none');
         (function ($) {
             'use strict';
-    
+            $('.subscription-form').on('submit', function (e) {
+                e.preventDefault();
+                var inputEmail = $('#subscribeEmail');
+                var b = $('.subscription-form__error');
+                var c = $('.subscription-form__succses');
+                c.css('display', 'none');
+                b.css('display', 'none');
+                let validateEmail = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+                if (!validateEmail.test(inputEmail.val())) {
+                    b.css('display', 'block')
+                }
+
+                if (validateEmail.test(inputEmail.val())) {
+                    c.css('display', 'block')
+                }
+
+            });
+
             $('#bands').slick({
                 dots: false,
                 infinite: true,
@@ -19,13 +40,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 // adaptiveHeight: true,
                 prevArrow: $('#arrowLeft'),
                 nextArrow: $('#arrowRight'),
-                responsive: [
-                    {
-                      breakpoint: 900,
-                      settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
-                      }
+                responsive: [{
+                        breakpoint: 900,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                        }
                     },
                     {
                         breakpoint: 500,
@@ -33,16 +53,17 @@ document.addEventListener('DOMContentLoaded', function () {
                             slidesToShow: 1,
                             slidesToScroll: 1
                         }
-                    }]
+                    }
+                ]
             });
-    
+
         })
         (jQuery);
     }
     checkboxes();
     getLowerCost();
     getHigherCost();
-    likeClicked();
+    // likeClicked();
     addBasket();
 
     (function () {
@@ -146,12 +167,12 @@ $(function () {
     })
 });
 
-function formSubmit() {
-    document.getElementById('form').addEventListener('submit', function (e) {
-        e.preventDefault()
-    })
-};
-formSubmit();
+// function formSubmit() {
+//     document.getElementById('form').addEventListener('submit', function (e) {
+
+//     })
+// };
+// formSubmit();
 
 function checkboxes() {
     var list = document.getElementById('filterBrand');
@@ -345,15 +366,17 @@ function getHigherCost() {
     return highPrice;
 };
 
-function likeClicked() {
-    let list = document.getElementById('goods');
-    list.addEventListener('click', function (e) {
-        e.preventDefault();
-        let target = e.target;
-        if (target.classList.contains('svg-heart'))
-            toggleSvg(target)
-    })
-};
+
+
+// function likeClicked() {
+//     let list = document.getElementById('goods');
+//     list.addEventListener('click', function (e) {
+//         e.preventDefault();
+//         let target = e.target;
+//         if (target.classList.contains('svg-heart'))
+//             toggleSvg(target)
+//     })
+// };
 
 function boxClicked() {
     var list = document.getElementById('goods');
@@ -383,12 +406,6 @@ function addingGoods(data) {
         out += '<p class="catalog-items__price">' + data['items'][key]['cost'] + ' ₴' + '</p>';
         out += '</div>';
         out += '<div class="catalog-items-social">';
-        out += '<button class="catalog-social__svg like">';
-        out += '<svg class="svg-heart" width="21" height="18" viewBox="0 0 21 18">';
-        out += '<use xlink:href="#love-svg">';
-        out += '</use>';
-        out += '</svg>';
-        out += '</button>';
         out += '<button class="catalog-social__svg elem">'
         out += '<svg class="basket-svg" width="18" height="16" viewBox="0 0 18 16">';
         out += '<use class="basket-svg" xlink:href="#box-svg">';
@@ -416,12 +433,6 @@ function addingBands(data) {
         bands += '<p class="bands-items__price">' + data['bands'][key]['cost'] + ' ₴' + '</p>';
         bands += '</div>';
         bands += '<div class="bands-items-social">';
-        bands += '<button class="bands-social__svg like">';
-        bands += '<svg width="21" height="18" viewBox="0 0 21 18">';
-        bands += '<use xlink:href="#love-svg">';
-        bands += '</use>';
-        bands += '</svg>';
-        bands += '</button>';
         bands += '<button class="bands__svg elem">'
         bands += '<svg class="basket-svg" width="18" height="16" viewBox="0 0 18 16">';
         bands += '<use class="basket-svg" xlink:href="#box-svg">';
@@ -467,12 +478,6 @@ function addingSortedGoods(data) {
         out += '<p class="catalog-items__price">' + data[i]['items']['cost'] + ' ₴' + '</p>';
         out += '</div>';
         out += '<div class="catalog-items-social">';
-        out += '<button class="catalog-social__svg like">';
-        out += '<svg class="svg-heart" width="21" height="18" viewBox="0 0 21 18">';
-        out += '<use xlink:href="#love-svg">';
-        out += '</use>';
-        out += '</svg>';
-        out += '</button>';
         out += '<button class="catalog-social__svg elem">'
         out += '<svg class="basket-svg" width="18" height="16" viewBox="0 0 18 16">';
         out += '<use class="basket-svg" xlink:href="#box-svg">';

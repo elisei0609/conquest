@@ -32,6 +32,10 @@
       box-shadow: 0 2px 8px hsla(0, 0%, 57.3%, .5);
       max-width: 100%;
 
+      &__back {
+         border-bottom: 1px solid;
+      }
+
       &__item {
          display: flex;
          justify-content: space-between;

@@ -520,11 +520,24 @@ $color: #1B1A17;
          align-items: unset;
       }
 
+      &__error {
+         position: absolute;
+         color: #f00;
+         bottom: -25px;
+      }
+
+      &__succses {
+         position: absolute;
+         color: green;
+         bottom: -25px;
+      }
+
       &__container {
          display: flex;
          justify-content: space-between;
          max-width: 495px;
          width: 100%;
+         position: relative;
 
          @media screen and (max-width: 420px) {
             flex-direction: column;
@@ -771,7 +784,7 @@ $color: #1B1A17;
 .basket-wrapper {
    position: fixed;
    bottom: 5%;
-   right: 10%;
+   right: 3%;
    z-index: 200;
 }
 

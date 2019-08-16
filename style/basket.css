@@ -43,6 +43,10 @@
   max-width: 100%;
 }
 
+.checkout-cart__back {
+  border-bottom: 1px solid;
+}
+
 .checkout-cart__item {
   display: -webkit-box;
   display: -ms-flexbox;

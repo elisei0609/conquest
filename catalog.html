@@ -90,7 +90,7 @@
             </div>
             <div class="catalog-container">
                <div class="catalog-filter catalog-filter_disable" id="filter-block">
-                  <form id="form" action="">
+                  <form id="form" >
                      <div class="catalog-filter-item" id="slider-filter">
                         <h4 class="catalog-filter__title">Cтоимость
                            <button class="catalog-filter__button catalog-filter__button_active" id="filterBtn"></button>
@@ -148,7 +148,7 @@
                         <h4 class="catalog-filter__title">Цвет</h4>
                         <button class="catalog-filter__button"></button>
                      </div>
-                     <button type="submit" class="catalog-filter__reset btn" id="reset">Сбросить фильтр</button>
+                     <!-- <button type="submit" class="catalog-filter__reset btn" id="reset">Сбросить фильтр</button> -->
                   </form>
                </div>
                <div class="catalog-items">
@@ -181,11 +181,13 @@
       <section class="subscription">
          <div class="container">
             <p class="subscription__description">Подписка на рассылку</p>
-            <form action="GET" class="subscription-form">
+            <form  class="subscription-form" novalidate>
                <h2 class="subscription-form__title">Получить скидку 10% на первую покупку</h2>
                <div class="subscription-form__container">
                   <input type="email" name="subscribe" id="subscribeEmail" class="subscription-form__input"
-                     placeholder="E-mail" required>
+                     placeholder="E-mail" >
+                     <p class="subscription-form__error">Введите валидный e-mail</p>
+                     <p class="subscription-form__succses">Промокод был отправлен на ваш e-mail!</p>
                   <button type="submit" class="subscription-form__btn btn">Подписаться</button>
                </div>
             </form>
@@ -255,11 +257,11 @@
             d="M15.8041 14.8637L11.9576 11.0171C12.911 9.85469 13.4857 8.36571 13.4857 6.74286C13.4857 3.02041 10.4653 0 6.74286 0C3.01714 0 0 3.02041 0 6.74286C0 10.4653 3.01714 13.4857 6.74286 13.4857C8.36571 13.4857 9.85143 12.9143 11.0139 11.9608L14.8604 15.8041C15.1216 16.0653 15.5429 16.0653 15.8041 15.8041C16.0653 15.5461 16.0653 15.1216 15.8041 14.8637ZM6.74286 12.1437C3.76163 12.1437 1.33878 9.72082 1.33878 6.74286C1.33878 3.7649 3.76163 1.33878 6.74286 1.33878C9.72082 1.33878 12.1469 3.7649 12.1469 6.74286C12.1469 9.72082 9.72082 12.1437 6.74286 12.1437Z"
             fill="#1B1A17" />
       </symbol>
-      <symbol width="21" height="18" viewBox="0 0 21 18" xmlns="http://www.w3.org/2000/svg" id="love-svg">
+      <!-- <symbol width="21" height="18" viewBox="0 0 21 18" xmlns="http://www.w3.org/2000/svg" id="love-svg">
          <path class="love-path"
             d="M19.9686 5.77104C19.6912 3.00625 17.5306 1.00033 14.8266 1.00033C13.0251 1.00033 11.3757 1.87835 10.4475 3.28557C9.5278 1.86015 7.94595 1 6.17336 1C3.4697 1 1.30868 3.00592 1.0317 5.77071C1.00978 5.89283 0.919889 6.53555 1.19321 7.58368C1.58712 9.09548 2.49699 10.4706 3.82378 11.5594L10.4431 17L17.1761 11.5598C18.5029 10.4706 19.4128 9.09581 19.8067 7.58368C20.08 6.53588 19.9902 5.89316 19.9686 5.77104ZM19.0953 7.4321C18.7357 8.81284 17.9022 10.0708 16.6872 11.0676L10.4475 16.1097L4.31489 11.069C3.09772 10.0701 2.26459 8.81251 1.90466 7.43177C1.64595 6.4399 1.75229 5.87959 1.75265 5.87595L1.75813 5.84253C1.99565 3.42027 3.85229 1.66191 6.17336 1.66191C7.88602 1.66191 9.39369 2.61506 10.1092 4.14903L10.4457 4.87151L10.7822 4.14903C11.4864 2.63856 13.0737 1.66224 14.8269 1.66224C17.1476 1.66224 19.0047 3.4206 19.2469 5.8743C19.2476 5.87959 19.354 6.44023 19.0953 7.4321Z"
             stroke-width="0.75" />
-      </symbol>
+      </symbol> -->
 
       <symbol width="18" height="16" viewBox="0 0 18 16" xmlns="http://www.w3.org/2000/svg" id="box-svg">
          <path

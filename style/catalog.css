@@ -580,6 +580,18 @@
   }
 }
 
+.subscription-form__error {
+  position: absolute;
+  color: #f00;
+  bottom: -25px;
+}
+
+.subscription-form__succses {
+  position: absolute;
+  color: green;
+  bottom: -25px;
+}
+
 .subscription-form__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -589,6 +601,7 @@
           justify-content: space-between;
   max-width: 495px;
   width: 100%;
+  position: relative;
 }
 
 @media screen and (max-width: 420px) {
@@ -874,7 +887,7 @@
 .basket-wrapper {
   position: fixed;
   bottom: 5%;
-  right: 10%;
+  right: 3%;
   z-index: 200;
 }
 
