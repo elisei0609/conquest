@@ -40,7 +40,7 @@
                      <img src="img/logo.png" alt="conquest" class="header-buttons__logo">
                      <nav class="nav">
                         <ul class="nav-list">
-                           <li class="nav-list__item nav-list__item_active"><a href="catalog.html">Каталог</a></li>
+                           <li class="nav-list__item"><a href="catalog.html">Каталог</a></li>
                            <li class="nav-list__item"><a href="#">Акции</a></li>
                            <li class="nav-list__item"><a href="#">Доставка</a></li>
                            <li class="nav-list__item"><a href="#">Контакты</a></li>
@@ -134,22 +134,23 @@
       </section>
       <section class="quality">
          <div class="container">
-            <div class="quality-container">
-               <div class="quality-images">
-                  <img src="img/quality1.jpg" alt="watches">
-                  <div class="quality-pagination">
-                     <span id="arrow-left"></span>
-                     <p class="quality-pagination__number">01</p>
-                     <span id="arrow-right"></span>
-                  </div>
-               </div>
-               <div class="quality-text">
-                  <h2 class="quality-text__title">Подлинное качество</h2>
-                  <p class="quality-text__text">Все часы производятся в Швейцарии и имеют сертификаты качества.
-                     Настояие
-                     швейцарские часы — это предмет гордости и престижа.</p>
-                  <button class="quality-text__button btn">Смотреть каталог</button>
-               </div>
+            <div class="quality-text">
+               <h2 class="quality-text__title">Подлинное качество</h2>
+               <p class="quality-text__text">Все часы производятся в Швейцарии и имеют сертификаты качества.
+                  Настояие
+                  швейцарские часы — это предмет гордости и престижа.</p>
+               <button class="quality-text__button btn">Смотреть каталог</button>
+            </div>
+            <!-- <div class="quality-container"> -->
+            <div class="quality-images">
+               <div><img src="img/quality1.jpg" alt="watches"></div>
+               <div><img src="img/quality4.jpg" alt="watches"></div>
+               <div><img src="img/quality2.jpg" alt="watches"></div>
+            </div>
+            <!-- </div> -->
+            <div class="quality-pagination">
+               <button id="arrow-left"></button>
+               <button id="arrow-right"></button>
             </div>
 
          </div>
@@ -285,6 +286,8 @@
 
    </svg>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+   <script src="js/slick.min.js"></script>
+   <script src="js/index.js"></script>
 </body>
 
 </html>

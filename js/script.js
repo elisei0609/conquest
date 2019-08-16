@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     getLowerCost();
     getHigherCost();
     likeClicked();
+    
 
     (function () {
         var min = document.getElementById('slider-filter');
@@ -443,3 +444,25 @@ function addingSortedGoods(data) {
     }
     goods.innerHTML = out;
 };
+
+$('.quality-images').slick({
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    adaptiveHeight: true
+  });
+
+  (function ($) {
+    'use strict';
+    
+    $('.quality-images').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        adaptiveHeight: true
+      });
+       
+    })
+ (jQuery);

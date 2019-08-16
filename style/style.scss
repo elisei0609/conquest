@@ -32,6 +32,9 @@
 
 }
 
+@import 'slick.scss';
+@import 'slick-theme.scss';
+
 
 // styles //
 * {
@@ -531,18 +534,23 @@ h2 {
    padding-bottom: 26px;
 
    &-images {
+
       @media screen and (max-width: 808px) {
          width: 100%;
       }
 
       img {
-         max-width: 521px;
+         
          width: 100%;
-         height: auto;
+         max-width: 90vh;
+         height: 100%;
+         max-height: 500px;
          object-fit: cover;
+         margin: 0 auto;
 
          @media screen and (max-width: 808px) {
             max-width: 100%;
+            max-height: 65vw;
          }
       }
    }
@@ -566,10 +574,8 @@ h2 {
 
    &-text {
       display: flex;
-      max-width: 387px;
       flex-direction: column;
       justify-content: center;
-      margin-left: 7%;
 
       @media screen and (max-width: 808px) {
          margin-left: 0;
@@ -577,7 +583,7 @@ h2 {
       }
 
       &__title {
-         margin-bottom: 10%;
+         margin-bottom: 4%;
 
          @media screen and (max-width: 808px) {
             margin-bottom: 5%;
@@ -585,7 +591,7 @@ h2 {
       }
 
       &__text {
-         margin-bottom: 12%;
+         margin-bottom: 5%;
          line-height: 150%;
 
          @media screen and (max-width: 808px) {
@@ -599,15 +605,16 @@ h2 {
          max-width: 205px;
          max-height: 64px;
          height: 64px;
+         margin-bottom: 5%;
 
       }
    }
 
    &-pagination {
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
       align-items: flex-start;
-      margin-right: 14.5%;
+      margin-top: 2%;
 
       @media screen and (max-width: 808px) {
          justify-content: center;
@@ -627,6 +634,7 @@ h2 {
          display: inline-block;
          width: 10px;
          height: 15px;
+         margin: 0 2%;
 
 
          &:before {
@@ -1239,7 +1247,7 @@ i.fa-chevron-left {
          justify-content: space-between;
 
          &__item {
-            
+
             &:hover {
                color: #A69876;
             }
