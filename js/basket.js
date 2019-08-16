@@ -54,7 +54,7 @@ function plusAmount(item) {
    if (childElement.value == 10) {
       item.querySelector('#buttonRight').classList.add('disabled');
    }
-
+   itemPrice(item, childElement)
 
 }
 
