@@ -40,6 +40,10 @@
   font-weight: 500;
 }
 
+.pages-list__item a:hover {
+  color: #A69876;
+}
+
 .pages-list__item_active {
   color: #555248;
 }

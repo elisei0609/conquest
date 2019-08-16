@@ -38,6 +38,12 @@ $color: #1B1A17;
          margin-right: 31px;
          font-weight: 500;
 
+         a {
+            &:hover {
+               color: #A69876;
+            }
+         }
+
          &_active {
             color: #555248;
          }
@@ -721,4 +727,3 @@ $color: #1B1A17;
    background-color: #D4D4D4;
    margin-bottom: 5%;
 }
-
