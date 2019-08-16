@@ -43,9 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
     getLowerCost();
     getHigherCost();
     likeClicked();
-
-  
-
+    addBasket();
 
     (function () {
         var min = document.getElementById('slider-filter');
@@ -224,6 +222,16 @@ function checkboxes() {
     })
 })();
 
+function addBasket() {
+    if (localStorage.length >= 1) {
+        document.getElementById('basketWrap').classList.remove('hide');
+        console.log(document.getElementById('basketWrap'))
+        document.getElementById('basketPrice').innerHTML = localStorage.length;
+    } else {
+        document.getElementById('basketWrap').classList.add('hide');
+    }
+};
+
 
 function expensiveSort() {
     var arr = document.querySelectorAll('.catalog-items-item');
@@ -356,6 +364,8 @@ function boxClicked() {
         if (target.classList.contains('basket-svg')) {
             id = target.closest('.catalog-items-item').dataset.priority;
             localStorage.setItem(id, id)
+            document.getElementById('basketPrice').innerHTML = localStorage.length;
+            addBasket();
         }
     })
 }

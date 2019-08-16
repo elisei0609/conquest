@@ -616,6 +616,14 @@
   }
 }
 
+@media screen and (max-width: 420px) {
+  .subscription-form__title {
+    max-width: 100%;
+    margin-bottom: 10%;
+    font-size: 20px;
+  }
+}
+
 .subscription-form__input {
   max-width: 278px;
   width: 100%;
@@ -861,5 +869,52 @@
 
 .catalog-filters__filter {
   margin-bottom: 0;
+}
+
+.basket-wrapper {
+  position: fixed;
+  bottom: 5%;
+  right: 10%;
+  z-index: 200;
+}
+
+#basketBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  background-color: #fff;
+}
+
+.basket-price {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #f00;
+  right: 1px;
+  top: 0px;
+  font-size: 12px;
+  text-align: center;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=catalog.css.map */
